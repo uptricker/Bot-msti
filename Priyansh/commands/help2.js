@@ -63,10 +63,10 @@ module.exports. run = function({ api, event, args, getText }) {
     i = startSlice;
     const returnArray = arrayInfo.slice(startSlice, startSlice + numberOfOnePage);
 
-    for (let item of returnArray) msg += `𒁍  [${++i}]  ⃝𒁍 ${prefix}${item} ❃ ═ ❤️ \n`;
+    for (let item of returnArray) msg += `😈😘  [${++i}] > ${prefix}${item} \n`;
 
 
-    const siu = `┏━━━━━┓\n    आदि-बाबू                    ✧═══•❁😛❁•═══✧\n┗━━━━━┛\n\n\n✧═══❁♥️TOTAL COMMAND LIST ♥️❁═══✧`;
+    const siu = `┏━━━━━┓\n    आदि-बाबू                    ✧═══•❁😛❁•═══✧\n┗━━━━━┛\n\n✧═══❁♥️TOTAL COMMAND LIST ♥️❁═══✧`;
 
  const text = `PAGE 𒁍  [ ${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)} ]\n\nOR COMMAND KE LIYE HAI MENU TYPE KRO\nTHIS BOT IS MADE BYE MR AADI BABU 🙂✌️\n\n\n\n❁ ═════ ❃AADI-BABU❃ ═════ ❁`;
 
