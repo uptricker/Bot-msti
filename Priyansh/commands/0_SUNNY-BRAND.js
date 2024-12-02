@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
         if (event.body.indexOf("@Sunny Brand ")==0 || event.body.indexOf("sunny")==0 || event.body.indexOf("Sunny")==0 || event.body.indexOf("SUNNY")==0) {
                 var msg = {
                                 body: "=𝐎𝐰𝐧𝐞𝐫 ➻   \n_______________________\n\n. 𝐎𝐰𝐧𝐞𝐫 ==∆ SuNNY \n_______________________",
-                                attachment: fs.createReadStream(__dirname + `/noprefix/IMG_20241202_205516_489.webp`)
+                                attachment: fs.createReadStream(__dirname + `/noprefix/Picsart_24-12-01_21-53-47-781.jpg`)
                         }
                         api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😎", event.messageID, (err) => {}, true)
