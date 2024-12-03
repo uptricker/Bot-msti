@@ -4,7 +4,7 @@ module.exports.config = {
   name: "joke",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "SHANKAR",
+  credits: "AADI-BABU",
   description: "Ek mazedaar joke bhejta hai",
   commandCategory: "Fun",
   usages: "joke",
@@ -18,7 +18,7 @@ module.exports.handleEvent = async function ({ api, event }) {
 
   if (body.toLowerCase() === "joke") {
     try {
-      const response = await axios.get(`https://English-jokes-api.onrender.com/jokes?api_key=${API_KEY}`);
+      const response = await axios.get(`https://hindi-jokes-api.onrender.com/jokes?api_key=${API_KEY}`);
       const jokeContent = response.data.jokeContent;
 
       if (jokeContent) {
