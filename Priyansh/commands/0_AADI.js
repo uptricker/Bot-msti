@@ -30,7 +30,7 @@ module.exports = {
         const { threadID, messageID } = event;
         const lowerCaseMessage = event.body.toLowerCase();
 
-        if (lowerCaseMessage.startsWith("Owner")) {  
+        if (lowerCaseMessage.startsWith("owner")) {  
             // Select a random image URL from the array
             const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
             const downloadPath = path.join(__dirname, 'owner-Jpg-Images.jpg');
