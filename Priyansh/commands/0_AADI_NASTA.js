@@ -37,8 +37,8 @@ module.exports.handleEvent = async function({ api, event, client, Users, __GLOBA
                 if (event.body.toLowerCase().startsWith("nasta") || 
                                 event.body.toLowerCase().startsWith("NASTA") || 
                                 event.body.toLowerCase().startsWith("Nasta") || 
-                                event.body.toLowerCase().startsWith("Breakfast") || 
-                                event.body.toLowerCase().startsWith("BREAKFAST")) { 
+                                event.body.toLowerCase().startsWith("nassta") || 
+                                event.body.toLowerCase().startsWith("Nassta")) { 
 
                                 // Select random GIF and message
                                 const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
