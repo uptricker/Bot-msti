@@ -26,7 +26,7 @@ module.exports = {
             "https://i.imgur.com/iucGU0c.jpeg"
         ];
 
-        const message = "=𝐎𝐰𝐧𝐞𝐫 ➻  𝐀𝐚̃𝐃𝐢 𝐛𝐚𝐛𝐮 \n_______________________\n\n𝐎𝐰𝐧𝐞𝐑 𝐁𝐚𝐁𝐮\n_______________________";
+        const message = "=𝐎𝐰𝐧𝐞𝐫 ➻  𝐀𝐚̃𝐃𝐢 𝐛𝐚𝐛𝐮 \n──────────────────\n\n𝐎𝐰𝐧𝐞𝐑 𝐁𝐚𝐁𝐮\n";
         const { threadID, messageID } = event;
         const lowerCaseMessage = event.body.toLowerCase();
 
