@@ -31,29 +31,29 @@ module.exports.run = async function({ api, event }) {
         if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
                 api.changeNickname(`{ ${global.config.PREFIX} } × ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
                 const fs = require("fs");
-                return api.sendMessage("Hello Everyone🙋‍♂️", event.threadID, () => api.sendMessage({body:`🌺AADI🦋🌺 CONNECTED«
+                return api.sendMessage("Hello Everyone🙋‍♂️", event.threadID, () => api.sendMessage({body:`=𝐎𝐰𝐧𝐞𝐫 ➻ 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃«
 
-Bot Made By AADI BABU☘️
+𝐁𝐎𝐓  𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐀𝐃𝐈 𝐁𝐀𝐁𝐔
 <------------------------------>  
-BOT CONNECTED SUCCESFUL !!! 
+𝐁𝐎𝐓  𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋  
 
-APPROVAL ALLOW IN THIS GROUP!!!
-<------------------------------>
+𝐀𝐏𝐏𝐑𝐎𝐕𝐀𝐋 𝐀𝐋𝐋𝐎𝐖 𝐈𝐍 𝐓𝐇𝐈𝐒 𝐆𝐑𝐎𝐔𝐏
+<──────────────────── >
 
-USE HELP TO SEE COMMAND 
+𝐒𝐄 𝐇𝐄𝐋𝐏 𝐓𝐎 𝐒𝐄𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 
 \n\nUse ${global.config.PREFIX}help to see commands.\n\nexample :\n${global.config.PREFIX}video7 (video songs)\n${global.config.PREFIX}music (audio songs)\n${global.config.PREFIX}help2 (command list)\n${global.config.PREFIX}info 
 <<<<<------------------------------>>>>>
-AND FOR ANY REPORT OR CONTACT BOT DEVELOPER
+𝐀𝐍𝐃 𝐅𝐎𝐑 𝐀𝐍𝐘 𝐑𝐄𝐏𝐎𝐑𝐓 𝐎𝐑 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐁𝐎𝐓 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑
 
-OWNER: आदि
+=𝐎𝐰𝐧𝐞𝐫 ➻     𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮
 
-♻️Facebook: 
+𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 𝐥𝐢𝐧𝐤 😊 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮 :- ☞ 
 
 https://www.facebook.com/profile.php?id=100066401546757&mibextid=ZbWKwL
 
-Youtube Site : N/A
+𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐒𝐈𝐓𝐄: N/A
 
-☢️ INSTAGRAM: N/A
+☢️ 𝐅𝐎𝐑 𝐀𝐍𝐘 𝐊𝐈𝐍𝐆 𝐎𝐅𝐅 𝐇𝐄𝐋𝐏 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐎𝐍 𝐈𝐍𝐒𝐓𝐀 𝐈𝐃: N/A
 
 https://www.instagram.com/aadi_singh__143?igsh=MXVneXZ6bzR4bHhvcg==￼
 
