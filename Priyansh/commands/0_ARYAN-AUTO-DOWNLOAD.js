@@ -3,7 +3,7 @@ module.exports = {
     name: "linkAutoDownload",
     version: "1.3.0",
     hasPermssion: 0,
-    credits: "ARIF BABU",
+    credits: "ARYAN",
     description:
       "Automatically detects links in messages and downloads the file.",
     commandCategory: "Utilities",
@@ -36,7 +36,7 @@ module.exports = {
 
       return api.sendMessage(
         {
-          body: `⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n\nᴛɪᴛʟᴇ: ${title}\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆`,
+          body: `⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n\nᴛɪᴛʟᴇ: ${title}\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆💐𝐀𝐑𝐘𝐀𝐍💐`,
           attachment: fs.createReadStream(__dirname + "/cache/auto.mp4"),
         },
         event.threadID,
