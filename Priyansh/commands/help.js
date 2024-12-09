@@ -2,8 +2,8 @@ module.exports.config = {
   name: "help",
   version: "1.0.2",
   hasPermssion: 0,
-  credits: "PREM BABU",
-  description: "THIS BOT IS MR PREM SHARMA",
+  credits: "ARYAN",
+  description: "THIS BOT IS MR ARYAN",
   commandCategory: "BOT-COMMAND-LIST",
   usages: "HELP",
   cooldowns: 5,
@@ -49,7 +49,9 @@ module.exports. run = function({ api, event, args, getText }) {
     const page = parseInt(args[0]) || 1;
     const numberOfOnePage = 8;
     let i = 0;
-    let msg = "┏━━━━━━━━━━┓\n    『٭』 ᏴᎡϴᏦᎬΝ ᎪᎪᎠᏆ 『٭』                    ✧═══•❁🥱❁•═══✧\n┗━━━━━━━━━━┛\n\n✧═══❁♥️COMMAND LIST ♥️❁═══✧\n\n";
+    let msg = "┏━━━━━━━━━━┓\n    『٭』╔╬⓼★⓼╃───────➣™
+🄼🅁 🄱🄾🅃 🄾🅆🄽🄴🅁 🄰🅁🅈🄰🄽𝄠━─━Ⓔ⧐
+╰✾✾®️╀✿✿╀─━ↈⓇ⧐『٭』                    ✧═══•❁🥱❁•═══✧\n┗━━━━━━━━━━┛\n\n✧═══❁♥️COMMAND LIST ♥️❁═══✧\n\n";
 
     for (var [name, value] of (commands)) {
       name += 
@@ -62,7 +64,7 @@ module.exports. run = function({ api, event, args, getText }) {
     i = startSlice;
     const returnArray = arrayInfo.slice(startSlice, startSlice + numberOfOnePage);
 
-    for (let item of returnArray) msg += `😈😘  [${++i}] → ${global.config.PREFIX}${item} 😈😘 \n`; 
+    for (let item of returnArray) msg += `😘ARYAN  [${++i}] → ${global.config.PREFIX}${item} 😈😘 \n`; 
 
     const text = `PAGE 𒁍   [${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)}]\n\nOR COMMAND KE LIYE HELP-2 TYPE KRO\nTHIS BOT IS MADE BY MR 『٭』 ᏴᎡϴᏦᎬΝ ᎪᎪᎠᏆ 『٭』 BABU 🙂✌️\n\n\n\n❁ ═════ ❃『٭』 ᏴᎡϴᏦᎬΝ ᎪᎪᎠᏆ 『٭』❃ ═════ ❁`;
     return api.sendMessage(msg + "\n" + text, threadID, async (error, info) => {
