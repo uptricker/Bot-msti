@@ -3,8 +3,8 @@ module.exports.config = {
         name: "Radha",
     version: "1.1.1",
         hasPermssion: 0,
-        credits: "AADI BABU",
-        description: "THIS BOT IS MR AADI SHARMA",
+        credits: "ARYAN",
+        description: "THIS BOT IS MR ARYAN",
         commandCategory: "no prefix",
     cooldowns: 5, 
 };
@@ -17,7 +17,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 react.includes("Radhe") ||
 react.includes("RADHE")) {
                 var msg = {
-                                body: `𝐎𝐰𝐧𝐞𝐫 ➻  ────  𝐀𝐚̃𝐃𝐢   𝐁𝐚𝐁𝐮. \n  __🥰  𝐌𝐀𝐈𝐍 𝐓𝐎 𝐑𝐀𝐃𝐇𝐀 𝐑𝐀𝐍𝐈 𝐊𝐀 𝐃𝐄𝐄𝐖𝐀𝐍𝐀 𝐇𝐔 𝐏𝐘𝐀𝐑 𝐒𝐄 𝐁𝐎𝐋𝐎 𝐑𝐀𝐃𝐇𝐄 𝐑𝐀𝐃𝐇𝐄 😍 ❤️`,attachment: fs.createReadStream(__dirname + `/noprefix/received_1702063427258615.mp4`)
+                                body: `𝐎𝐰𝐧𝐞𝐫 ➻  ────  💐𝐀𝐑𝐘𝐀𝐍💐 \n  __🥰  𝐌𝐀𝐈𝐍 𝐓𝐎 𝐑𝐀𝐃𝐇𝐀 𝐑𝐀𝐍𝐈 𝐊𝐀 𝐃𝐄𝐄𝐖𝐀𝐍𝐀 𝐇𝐔 𝐏𝐘𝐀𝐑 𝐒𝐄 𝐁𝐎𝐋𝐎 𝐑𝐀𝐃𝐇𝐄 𝐑𝐀𝐃𝐇𝐄 😍 ❤️`,attachment: fs.createReadStream(__dirname + `/noprefix/received_1702063427258615.mp4`)
                         }
                         api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🥀", event.messageID, (err) => {}, true)
