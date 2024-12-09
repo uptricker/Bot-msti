@@ -2,7 +2,7 @@ module.exports.config = {
   name: "dpname",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "AADI BABU",
+  credits: "ARYAN",
   description: "dpname maker",
   commandCategory: "dpname",
   usages: "text 1 + text 2",
