@@ -1,6 +1,6 @@
  fs = global.nodemodule["fs-extra"];
 module.exports.config = {
-  name: "AADI BOT 2",
+  name: "A BOT 2",
   version: "1.0.1",
   hasPermssion: 0,
   credits: "AADI BABU",
