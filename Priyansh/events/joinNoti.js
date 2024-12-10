@@ -31,35 +31,35 @@ module.exports.run = async function({ api, event }) {
         if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
                 api.changeNickname(`{ ${global.config.PREFIX} } × ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
                 const fs = require("fs");
-                return api.sendMessage("Hello Everyone🙋‍♂️", event.threadID, () => api.sendMessage({body:`=𝐎𝐰𝐧𝐞𝐫 ➻ 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃«
+                return api.sendMessage("Assalamu Alaikum Everyone🥀🥀", event.threadID, () => api.sendMessage({body:`🌺𝐀𝐑𝐘𝐀𝐍🦋🌺 CONNECTED«
 
-𝐁𝐎𝐓  𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐀𝐃𝐈 𝐁𝐀𝐁𝐔
+💐𝐁𝐎𝐓 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐌𝐑. 𝐀𝐑𝐘𝐀𝐍💐
 <------------------------------>  
-𝐁𝐎𝐓  𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋  
+💐𝐁𝐎𝐓 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 𝐒𝐔𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘💐 !!! 
 
-𝐀𝐏𝐏𝐑𝐎𝐕𝐀𝐋 𝐀𝐋𝐋𝐎𝐖 𝐈𝐍 𝐓𝐇𝐈𝐒 𝐆𝐑𝐎𝐔𝐏
-<──────────────────── >
+💐𝐀𝐏𝐊𝐄 𝐆𝐑𝐎𝐔𝐏 𝐊𝐎 𝐌𝐄𝐑𝐄 𝐁𝐎𝐒𝐒 𝐀𝐑𝐘𝐀𝐍 𝐍𝐄 𝐀𝐏𝐏𝐑𝐎𝐕𝐄 𝐊𝐑 𝐃𝐈𝐘𝐀 𝐇💐!!!
+<------------------------------>
 
-𝐒𝐄 𝐇𝐄𝐋𝐏 𝐓𝐎 𝐒𝐄𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 
+💐𝐌𝐄𝐑𝐄 𝐂𝐎𝐌𝐌À𝐍𝐃 𝐃𝐄𝐊𝐇𝐍𝐄 𝐊 𝐋𝐈𝐘𝐄 À𝐏 𝐇𝐄𝐋𝐏 𝐊𝐀 𝐔𝐒𝐄 𝐊𝐀𝐑 𝐒𝐊𝐓𝐄 𝐇𝐀𝐈💐 
 \n\nUse ${global.config.PREFIX}help to see commands.\n\nexample :\n${global.config.PREFIX}video7 (video songs)\n${global.config.PREFIX}music (audio songs)\n${global.config.PREFIX}help2 (command list)\n${global.config.PREFIX}info 
 <<<<<------------------------------>>>>>
-𝐀𝐍𝐃 𝐅𝐎𝐑 𝐀𝐍𝐘 𝐑𝐄𝐏𝐎𝐑𝐓 𝐎𝐑 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐁𝐎𝐓 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑
+💐𝐊𝐈𝐒𝐈 𝐁𝐇𝐈  𝐢𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 𝐊 𝐋𝐈𝐘𝐄 𝐀𝐏 𝐌𝐄4𝐄 𝐁𝐎𝐒𝐒 𝐀𝐑𝐘𝐀𝐍 𝐒𝐄 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐊𝐀𝐑 𝐒𝐊𝐓𝐄 𝐇💐
 
-=𝐎𝐰𝐧𝐞𝐫 ➻     𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮
+💐𝐎𝐖𝐍𝐄𝐑💐: 𝐌𝐑.𝐀𝐑𝐘𝐀𝐍
 
-𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 𝐥𝐢𝐧𝐤 😊 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮 :- ☞ 
+♻️💐𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊 𝐈𝐃💐:: 
 
-https://www.facebook.com/profile.php?id=100066401546757&mibextid=ZbWKwL
+https://www.facebook.com/profile.php?id=100092750349098
 
-𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐒𝐈𝐓𝐄: N/A
+💐𝐘𝐎𝐔 𝐓𝐔𝐁𝐄 𝐒𝐈𝐓𝐄💐 : N/A
 
-☢️ 𝐅𝐎𝐑 𝐀𝐍𝐘 𝐊𝐈𝐍𝐆 𝐎𝐅𝐅 𝐇𝐄𝐋𝐏 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐎𝐍 𝐈𝐍𝐒𝐓𝐀 𝐈𝐃: N/A
+💐𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌💐: N/A
 
-https://www.instagram.com/aadi_singh__143?igsh=MXVneXZ6bzR4bHhvcg==￼
+💐𝐁𝐀𝐁𝐘 𝐌𝐔𝐉𝐄 𝐌𝐄𝐑𝐄 𝐁𝐎𝐒𝐒 𝐀𝐑𝐘𝐀𝐍 𝐍𝐄 𝐁𝐀𝐍𝐀𝐘𝐀 𝐇𝐀𝐈💐
 
-☣️Email: aadibroken046@gmail.com
+💐𝐄𝐌𝐀𝐈𝐋💐: cutekamina554@gmail.com
 
-⚠️Wp: 9548950035 `, attachment: fs.createReadStream(__dirname + "/cache/DhFHY1LcrjWZwBRkMlrtOdHr7QOeiGFMZqBGa4AEErRO.mp4")} ,threadID));
+💐𝐑𝐄𝐀𝐋𝐓𝐈𝐎𝐍𝐒𝐇𝐈𝐏💐:  Ç𝐎𝐌𝐌𝐈𝐓𝐄𝐃`, attachment: fs.createReadStream(__dirname + "/cache/Messenger_creation_1391031688616046.mp4")} ,threadID));
         }
         else {
                 try {
@@ -80,7 +80,7 @@ https://www.instagram.com/aadi_singh__143?igsh=MXVneXZ6bzR4bHhvcg==￼
                         }
                         memLength.sort((a, b) => a - b);
 
-                        (typeof threadData.customJoin == "undefined") ? msg = "𝐖𝐞𝐥𝐜𝐨𝐦𝐞   𝐓𝐨  𝐀𝐚𝐝𝐢  𝐛𝐚𝐛𝐮  𝐁𝐨𝐭  😇 ──────────────────\n𝐇𝐄𝐋𝐋𝐎 𝐁𝐀𝐁𝐘\n──────────────────\n🆆 🅴🅻🅻 🅲🅾🅼 🅴\n𝐍𝐄𝐖\n──────────────────\n[ {name} ]\n──────────────────\n𝐌𝐘 𝐆𝐑𝐎𝐔𝐏\n {threadName} \n𝐌𝐀𝐉𝐄 𝐊𝐀𝐑𝐎\n──────────────────𝐎𝐑 𝐓𝐔𝐌 𝐈𝐒 𝐆𝐑𝐎𝐔𝐏 𝐊𝐄 {soThanhVien} 𝐌𝐄𝐌𝐁𝐀𝐑 𝐇𝐎 𝐄𝐍𝐉𝐎𝐘 𝐊𝐀𝐑𝐎 𝐌𝐀𝐉𝐄 𝐋𝐎\n──────────────────\n──────────────────\n=𝐎𝐰𝐧𝐞𝐫 ➻    🌹 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮 🌹" : msg = threadData.customJoin;
+                        (typeof threadData.customJoin == "undefined") ? msg = "💐𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐀𝐑𝐘𝐀𝐍 𝐁𝐎𝐓 𝐁𝐀𝐁𝐘💐  😇● ========================= ●\n● ======= 𝐇𝐄𝐋𝐋𝐎 𝐁𝐀𝐁𝐘 ======= ●\n● ========================= ●\n\n● ==== 🆆 🅴🅻🅻 🅲🅾🅼 🅴 ==== ●\n\n● ========= 𝐍𝐄𝐖 ========= ●\n\n● ==== 🇲‌ 🇪‌ 🇲‌ 🇧‌ 🇪‌ 🇷‌ ==== ●\n\n● ========================= ● [   {name} ]\n● ========================= ●\n● ====== 𝐌𝐘 𝐆𝐑𝐎𝐔𝐏 ===== ●\n\n{threadName}\n\n● = 🥀 𝐇𝐀𝐏𝐏𝐘 𝐄𝐍𝐉𝐎𝐘 🥀 = ●\n\n● == 🥀 𝐌𝐀𝐉𝐄 𝐊𝐀𝐑𝐎 🥀  == ●\n● ========================= ● 𝐎𝐑 𝐓𝐔𝐌 𝐈𝐒 𝐆𝐑𝐎𝐔𝐏 𝐊𝐄  {soThanhVien} 𝐌𝐄𝐌𝐁𝐀𝐑 𝐇𝐎 𝐄𝐍𝐉𝐎𝐘 𝐊𝐀𝐑𝐎 𝐌𝐀𝐉𝐄 𝐋𝐎 [ . ] ● ========================= ●\n\n● ========================= ●\n● ======= 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 ====== ●\n\n☟  ========== ☟ ==========  ☟\n\n=𝐎𝐰𝐧𝐞𝐫 ➻    🌹 💐𝐀𝐑𝐘𝐀𝐍 𝐁𝐎𝐓💐 🌹\n● ========================= ●" : msg = threadData.customJoin;
                         msg = msg
                         .replace(/\{name}/g, nameArray.join(', '))
                         .replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
