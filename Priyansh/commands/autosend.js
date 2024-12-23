@@ -1,13 +1,3 @@
-time file
-
-
-
-
-
-
-
-
-
 const _0x598094=_0x141f;function _0x141f(_0x20f397,_0x3f9e94){const _0x5c333f=_0x5c33();return _0x141f=function(_0x141f16,_0xea4459){_0x141f16=_0x141f16-0x1ab;let _0x2ca041=_0x5c333f[_0x141f16];return _0x2ca041;},_0x141f(_0x20f397,_0x3f9e94);}function _0x5c33(){const _0x527f64=['2488190GhWODG','17379tKGPMw','5dbfBFf','2gXYkeb','11CbEtnU','679392wkNzCj','1315592HGUAYl','crypto','549306VWZelN','5216772QqijXh','12pRkXNG','44339tzvMGa','357e33b5568a7388199e9df32b4626c8','9ASWURX'];_0x5c33=function(){return _0x527f64;};return _0x5c33();}(function(_0x1d53fb,_0x11039a){const _0x22d1f3=_0x141f,_0x473899=_0x1d53fb();while(!![]){try{const _0x5d94f6=-parseInt(_0x22d1f3(0x1ab))/0x1*(parseInt(_0x22d1f3(0x1b1))/0x2)+parseInt(_0x22d1f3(0x1af))/0x3*(parseInt(_0x22d1f3(0x1b8))/0x4)+parseInt(_0x22d1f3(0x1b0))/0x5*(parseInt(_0x22d1f3(0x1b6))/0x6)+parseInt(_0x22d1f3(0x1b3))/0x7+parseInt(_0x22d1f3(0x1b4))/0x8*(parseInt(_0x22d1f3(0x1ad))/0x9)+parseInt(_0x22d1f3(0x1ae))/0xa+parseInt(_0x22d1f3(0x1b2))/0xb*(-parseInt(_0x22d1f3(0x1b7))/0xc);if(_0x5d94f6===_0x11039a)break;else _0x473899['push'](_0x473899['shift']());}catch(_0x4ad479){_0x473899['push'](_0x473899['shift']());}}}(_0x5c33,0x22398));const axios=require('axios'),crypto=require(_0x598094(0x1b5)),originalCreditsHash=_0x598094(0x1ac);
 
 module.exports.config = {
@@ -50,16 +40,16 @@ const shayariList = [
 "बेवजह मुस्कुरा देता हूँ, और यूँ ही अपने आधे दुश्मनों को हरा देता हूँ",
 ];
 const imgLinks = [
-"https://i.imgur.com/mCV0yO7.jpeg",
-"https://i.imgur.com/g20bTCc.jpeg",
-"https://i.imgur.com/F7kaU68.jpeg",
-"https://i.imgur.com/mdq4ddt.jpeg",
-"https://i.imgur.com/EfMcQTH.jpeg",
-"https://i.imgur.com/zwjcts2.jpeg",
-"https://i.imgur.com/ltEPYl7.jpeg",
-"https://i.imgur.com/oPcsI8R.jpeg",
-"https://i.imgur.com/5LdAggY.jpeg",
-"https://i.imgur.com/Ijy5Kcg.jpeg",
+"https://i.imgur.com/JBK7kxK.jpeg",
+"https://i.imgur.com/DoGrVqs.jpeg",
+"https://i.imgur.com/FwP8H1F.jpeg",
+"https://i.imgur.com/kcefAi0.jpeg",
+"https://i.imgur.com/0z8NWtN.jpeg",
+"https://i.imgur.com/uBGX4e5.jpeg",
+"https://i.imgur.com/mCVNEXQ.jpeg",
+"https://i.imgur.com/qfGcjF4.jpeg",
+"https://i.imgur.com/uixAjP1.jpeg",
+"https://i.imgur.com/R4BI2oK.jpeg",
 ];
 
 let lastSentHour = null;
@@ -91,7 +81,7 @@ const sendHourlyMessages = async (api) => {
       `✰ 𝗗𝗔𝗧𝗘 ➪ ${date}✰${month}✰${year} 📆\n` +
       `✰ 𝗗𝗔𝗬 ➪ ${day} ⏳\n\n` +
       `${randomShayari}\n\n` +
-      `❁ ━━━━━ ❃ 𝐌.𝐑 𝐀𝐑𝐘𝐀𝐍 ❃ ━━━━━ ❁`;
+      `❁ ━━━━━ ❃ आरिफ बाबू ❃ ━━━━━ ❁`;
 
     const threadList = await api.getThreadList(100, null, ["INBOX"]);
     const activeThreads = threadList.filter(thread => thread.isSubscribed);
