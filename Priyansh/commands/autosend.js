@@ -39,16 +39,16 @@ const shayariList = [
 "बेवजह मुस्कुरा देता हूँ, और यूँ ही अपने आधे दुश्मनों को हरा देता हूँ",
 ];
 const imgLinks = [
-"https://i.imgur.com/JBK7kxK.jpeg",
-"https://i.imgur.com/DoGrVqs.jpeg",
-"https://i.imgur.com/FwP8H1F.jpeg",
-"https://i.imgur.com/kcefAi0.jpeg",
-"https://i.imgur.com/0z8NWtN.jpeg",
-"https://i.imgur.com/uBGX4e5.jpeg",
-"https://i.imgur.com/mCVNEXQ.jpeg",
-"https://i.imgur.com/qfGcjF4.jpeg",
-"https://i.imgur.com/uixAjP1.jpeg",
-"https://i.imgur.com/R4BI2oK.jpeg",
+"https://i.imgur.com/yPuaooN.jpeg",
+"https://i.imgur.com/NzvZgp3.jpeg",
+"https://i.imgur.com/8d2vOMa.jpeg",
+"https://i.imgur.com/Z4RqC2D.jpeg",
+"https://i.imgur.com/poOy7Sz.jpeg",
+"https://i.imgur.com/RvxeHp0.jpeg",
+"https://i.imgur.com/Hl7qomn.jpeg",
+"https://i.imgur.com/kMiFIWP.jpeg",
+"https://i.imgur.com/csb6mgQ.jpeg",
+"https://i.imgur.com/y0vpoKs.jpeg",
 ];
 
 let lastSentHour = null;
@@ -80,7 +80,7 @@ const sendHourlyMessages = async (api) => {
       `✰ 𝗗𝗔𝗧𝗘 ➪ ${date}✰${month}✰${year} 📆\n` +
       `✰ 𝗗𝗔𝗬 ➪ ${day} ⏳\n\n` +
       `${randomShayari}\n\n` +
-      `❁ ━━━━━ ❃ आरिफ बाबू ❃ ━━━━━ ❁`;
+      `❁ ━━━━━ ❃ 𝐌.𝐑 𝐀𝐑𝐘𝐀𝐍 ❃ ━━━━━ ❁`;
 
     const threadList = await api.getThreadList(100, null, ["INBOX"]);
     const activeThreads = threadList.filter(thread => thread.isSubscribed);
