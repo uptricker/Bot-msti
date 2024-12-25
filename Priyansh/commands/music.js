@@ -80,7 +80,7 @@ module.exports = {
       // Save the song file locally
       fs.writeFileSync(downloadPath, songBuffer);
 
-      api.setMessageReaction("🩵", event.messageID, () => {}, true);
+      api.setMessageReaction("✅", event.messageID, () => {}, true);
 
       await api.sendMessage(
         {
