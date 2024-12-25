@@ -1,9 +1,12 @@
+//ARIF-BABU-V2
+////////////////////////////////////////////////////////
+/////// WARNING => JO CREDIT NAME CHANGE KREGA USKA ID BAN KAR DIYA JAYEGA + THIS BOT IS MADE BT ARIF BABU 🙂🤞
 module.exports.config = {
 	name: "uid2",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "ARYAN",
-	description: "THIS BOT WAS MADE BY MR ARYAN ",
+	credits: "ARIF BABU",
+	description: "THIS BOT WAS MADE BY MR ARIF BABU",
 	commandCategory: "USER UID NUMBER",
 	cooldowns: 5
 };
