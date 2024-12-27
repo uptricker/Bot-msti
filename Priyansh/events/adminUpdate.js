@@ -84,7 +84,7 @@ module.exports.run = async function ({ event, api, Threads, Users }) {
             case "log:thread-call": {
                 if (logMessageData.event == "group_call_started") {
                     const name = await Users.getNameUser(logMessageData.caller_id);
-                    api.sendMessage(`❯❯❯⭑𝐆𝐑𝐎𝐔𝐏 𝐔𝐏𝐃𝐀𝐓𝐄 ⭑❮❮❮\n᯽ــــــــــــــــــــــــــــــــــــــ᯽\n𓆩𑁍𓆪${name} ᭄࿐𓆩𑁍𓆪\n᯽ــــــــــــــــــــــــــــــــــــــ᯽\n ⭑｟𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐀 ${(logMessageData.video) ? '𝐕𝐈𝐃𝐄𝐎｠⭑ ' : ''}𝐂𝐀𝐋𝐋｠⭑`, threadID);
+                    api.sendMessage(`❯❯❯⭑𝐆𝐑𝐎𝐔𝐏 𝐔𝐏𝐃𝐀𝐓𝐄 ⭑❮❮❮\n᯽ــــــــــــــــــــــــــــــــــــــ᯽\n⎯ⷨ͢⟵͇̽💗⃪꯭ⷯ༆⁂𝄄❘⍣ 【＿${name} ＿】 ⎯᪵⎯꯭̽𝆺꯭𝅥🌿꯭.\n᯽ــــــــــــــــــــــــــــــــــــــ᯽\n ⭑｟𝐒𝐓𝐀𝐑𝐓𝐄𝐃 𝐀 ${(logMessageData.video) ? '𝐕𝐈𝐃𝐄𝐎｠⭑ ' : ''}𝐂𝐀𝐋𝐋｠⭑`, threadID);
                 }
                 else if (logMessageData.event == "group_call_ended") {
                     const callDuration = logMessageData.call_duration;
