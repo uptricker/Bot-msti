@@ -67,7 +67,7 @@ module.exports. run = function({ api, event, args, getText }) {
 
 
     const siu = `┏━━━━━┓\n   ╔╬⓼★⓼╃───────➣™
-🄼🅁 🄱🄾🅃 🄾🅆🄽🄴🅁 🄰🅁🅈🄰🄽𝄠━─━Ⓔ⧐
+🄼🅁 🄱🄾🅃 🄾🅆🄽🄴🅁 🅂🄷🄰🄰🄽𝄠━─━Ⓔ⧐
 ╰✾✾®️╀✿✿╀─━ↈⓇ⧐                   ✧═══•❁😛❁•═══✧\n┗━━━━━┛\n\n✧═══❁♥️TOTAL COMMAND LIST ♥️❁═══✧`;
 
  const text = `PAGE 𒁍  [ ${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)} ]\n\nOR COMMAND KE LIYE HAI MENU TYPE KRO\nTHIS BOT IS MADE BY ARYAN 🙂✌️\n\n\n\n❁ ═════ ❃ARYAN❃ ═════ ❁`;
