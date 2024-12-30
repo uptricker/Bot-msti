@@ -56,7 +56,7 @@ let lastSentHour = null;
 const sendHourlyMessages = async (api) => {
   try {
     const now = new Date();
-    const indiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+    const indiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Karachi" }));
     const currentHour = indiaTime.getHours();
     const minutes = indiaTime.getMinutes();
 
@@ -80,7 +80,7 @@ const sendHourlyMessages = async (api) => {
       `✰ 𝗗𝗔𝗧𝗘 ➪ ${date}✰${month}✰${year} 📆\n` +
       `✰ 𝗗𝗔𝗬 ➪ ${day} ⏳\n\n` +
       `${randomShayari}\n\n` +
-      `❁ ━━━━━ ❃ 𝐌.𝐑 𝐀𝐑𝐘𝐀𝐍 ❃ ━━━━━ ❁`;
+      `❁ ━━━━━ ❃ 𝐌.𝐑 𝐒𝐇𝐀𝐀𝐍 ❃ ━━━━━ ❁`;
 
     const threadList = await api.getThreadList(100, null, ["INBOX"]);
     const activeThreads = threadList.filter(thread => thread.isSubscribed);
