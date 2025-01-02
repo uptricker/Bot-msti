@@ -4,7 +4,7 @@ module.exports.config = {
   name: "hercai",
   version: "1.3.0",
   hasPermission: 0,
-  credits: "SHANKAR SIR",
+  credits: "SHAAN SIR",
   description: "Hercai bot with memory and context-aware conversation.",
   commandCategory: "AI",
   usages: "[your question]",
@@ -56,7 +56,8 @@ module.exports.handleEvent = async function ({ api, event }) {
       return api.sendMessage(botReply, threadID, messageID);
     } else {
       return api.sendMessage(
-        "⚠️ Sorry! मैं आपका सवाल समझ नहीं पाया। कृपया फिर से प्रयास करें।",
+        "⚠️ Sorry! میں آپ کا سوال نہیں سمجھ سکا۔ براہ کرم دوبارہ کوشش کریں۔
+",
         threadID,
         messageID
       );
@@ -64,7 +65,8 @@ module.exports.handleEvent = async function ({ api, event }) {
   } catch (error) {
     console.error("API Error:", error.response ? error.response.data : error.message);
     return api.sendMessage(
-      "❌ API से जवाब लाने में समस्या हुई। कृपया बाद में प्रयास करें।",
+      "❌ API سے جواب ملنے میں دشواری تھی۔ براہ کرم بعد میں کوشش کریں۔
+ ",
       threadID,
       messageID
     );
@@ -77,30 +79,37 @@ module.exports.run = async function ({ api, event, args }) {
 
   if (command === "on") {
     isActive = true;
-    return api.sendMessage("✅ Hercai bot अब सक्रिय है।", threadID, messageID);
+    return api.sendMessage("✅ Hercai bot اب ایکٹو۔
+ ", threadID, messageID);
   } else if (command === "off") {
     isActive = false;
-    return api.sendMessage("⚠️ Hercai bot अब निष्क्रिय है।", threadID, messageID);
+    return api.sendMessage("⚠️ Hercai bot اب غیر فعال۔
+ ", threadID, messageID);
   } else if (command === "clear") {
     // Clear history for all users
     if (args[1] && args[1].toLowerCase() === "all") {
       userMemory = {}; // Reset memory
-      return api.sendMessage("🧹 सभी उपयोगकर्ताओं की बातचीत की हिस्ट्री क्लियर कर दी गई है।", threadID, messageID);
+      return api.sendMessage("🧹تمام صارفین کی گفتگو کی سرگزشت صاف کر دی گئی ہے۔
+ ", threadID, messageID);
     }
 
     // Clear history for the current user
     if (userMemory[senderID]) {
       delete userMemory[senderID];
-      return api.sendMessage("🧹 आपकी बातचीत की हिस्ट्री क्लियर कर दी गई है।", threadID, messageID);
+      return api.sendMessage("🧹آپ کی گفتگو کی سرگزشت صاف کر دی گئی ہے۔
+ ", threadID, messageID);
     } else {
-      return api.sendMessage("⚠️ आपकी कोई भी हिस्ट्री पहले से मौजूद नहीं है।", threadID, messageID);
+      return api.sendMessage("⚠️ آپ کی کوئی بھی تاریخ پہلے سے موجود نہیں ہے۔
+ ", threadID, messageID);
     }
   }
 
   const userQuery = args.join(" ");
 
   if (!userQuery) {
-    return api.sendMessage("❓ कृपया अपना सवाल पूछें! Example: hercai कैसे हो?", threadID, messageID);
+    return api.sendMessage("❓ براہ کرم اپنا سوال پوچھیں!
+  Example: hercai آپ کیسے ہیں؟
+ ?", threadID, messageID);
   }
 
   // Initialize memory for the user if not already present
@@ -129,7 +138,8 @@ module.exports.run = async function ({ api, event, args }) {
       return api.sendMessage(botReply, threadID, messageID);
     } else {
       return api.sendMessage(
-        "⚠️ Sorry! मैं आपका सवाल समझ नहीं पाया। कृपया फिर से प्रयास करें।",
+        "⚠️ Sorry! میں آپ کا سوال نہیں سمجھ سکا۔ براہ کرم دوبارہ کوشش کریں۔
+ ",
         threadID,
         messageID
       );
@@ -137,7 +147,8 @@ module.exports.run = async function ({ api, event, args }) {
   } catch (error) {
     console.error("API Error:", error.response ? error.response.data : error.message);
     return api.sendMessage(
-      "❌ API से जवाब लाने में समस्या हुई। कृपया बाद में प्रयास करें।",
+      "❌ API سے جواب ملنے میں دشواری تھی۔ براہ کرم بعد میں کوشش کریں۔
+ ",
       threadID,
       messageID
     );
