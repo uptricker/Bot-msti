@@ -105,7 +105,7 @@ module.exports.languages = {
 		"on": "on",
 		"off": "off",
 		"successText": "success notification rankup!",
-		"levelup": "{name}, your keyboard has reached level {level}",
+		"levelup": "◈━━━━━━━━━━━━━━━━💚✨\n\n{name}, ◈━━━━━━━━━━━━━━━━💚✨\n\nyour keyboard has reached level {level}◈━━━━━━━━━━━━━━━━💚✨\n\𝐌𝐀𝐃𝐄 𝐁𝐘 𝐒𝐇𝐀𝐀𝐍\n◈━━━━━━━━━━━━━━━━💚✨",
 	}
 }
 
