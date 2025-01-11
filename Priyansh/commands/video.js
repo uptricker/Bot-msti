@@ -47,7 +47,7 @@ module.exports = {
     }
 
     // Notify the user that the bot is searching
-    api.sendMessage(`Searching YouTube for video "${searchTerm}"...`, event.threadID, event.messageID);
+    api.sendMessage(`Apki YouTube video Dundh Rahi Hu "${searchTerm}"...`, event.threadID, event.messageID);
 
     try {
       // Search for the video
@@ -97,7 +97,7 @@ const downloadAndSendVideo = async (url, title, api, event) => {
       // Send the video to the user
       await api.sendMessage(
         {
-          body: `Here is your video: ${title}`,
+          body: `𝙊𝙒𝙉𝙀𝙍 𝙎𝙃𝘼𝘼𝙉 𝙆𝙃𝘼𝙉 𝒀𝒆 𝑹𝒂𝒉𝒊 𝑨𝒑𝒌𝒊 𝑽𝒊𝒅𝒆𝒐: ${title}`,
           attachment: fs.createReadStream(videoPath),
         },
         event.threadID,
