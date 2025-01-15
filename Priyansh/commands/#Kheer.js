@@ -1,6 +1,6 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "Kheer",
+  name: "kheer",
     version: "2.1.1",
   hasPermssion: 0,
   credits: "𝐏𝐑𝐈𝐘𝐀𝐍𝐒𝐇𝐈 𝐊𝐀𝐔𝐑", 
