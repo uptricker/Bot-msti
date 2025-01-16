@@ -1,7 +1,7 @@
 {
-  "name": "aadi-babu",
+  "name": "Aadi-babu",
   "version": "10.1.1",
-  "description": "A simple Facebook Messenger Bot made by 𝐎𝐰𝐧𝐞𝐫 ➻ 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮.",
+  "description": "A simple Facebook Messenger Bot made by 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮 .",
   "main": "Priyansh.js",
   "engines": {
       "node": "20.x",
@@ -22,11 +22,11 @@
       "projectpriyansh",
       "messenger",
       "javascript",
-      "aadi",
+      "priyanshu",
       "prince",
       "mental"
   ],
-  "author": "𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮",
+  "author": "𝐎𝐰𝐧𝐞𝐫 ➻  𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮 ",
   "license": "GPL-3.0",
   "bugs": {
       "url": "https://github.com/Priyansh-11/Priyansh-bot/issues"
@@ -61,7 +61,8 @@
       "figlet": "^1.5.2",
       "form-data": "^4.0.0",
       "fs-extra": "^10.1.0",
-      "googlethis": "^1.2.9",
+      "googlethis": "^1.2.9",,
+      "https": "^1.0.0",
       "idioms": "0.0.2",
       "image-downloader": "^4.3.0",
       "jimp": "^0.16.13",
@@ -91,7 +92,7 @@
       "pidusage": "^3.0.0",
       "ping-monitor": "^0.6.2",
       "priyansh-fb-downloader": "^2.0.0",
-      "priyansh-ig-downloader": "^2.0.4",
+      "priyansh-ig-downloader": "^2.0.2",
       "random-cat-img": "^1.0.4",
       "readline": "^1.3.0",
       "request": "^2.88.2",
