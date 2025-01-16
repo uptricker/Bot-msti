@@ -1,113 +1,110 @@
-const fetch = require("node-fetch");
 const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
-const ytSearch = require("yt-search");
+const fs = require('fs-extra');
+const path = require('path');
+const { getStreamFromURL, shortenURL, randomString } = global.utils;
+
+const API_KEYS = [
+    'b38444b5b7mshc6ce6bcd5c9e446p154fa1jsn7bbcfb025b3b',
+];
+
+async function video(api, event, args, message) {
+    api.setMessageReaction("🕢", event.messageID, (err) => {}, true);
+    try {
+        let title = '';
+        let shortUrl = '';
+        let videoId = '';
+
+        const extractShortUrl = async () => {
+            const attachment = event.messageReply.attachments[0];
+            if (attachment.type === "video" || attachment.type === "audio") {
+                return attachment.url;
+            } else {
+                throw new Error("Invalid attachment type.");
+            }
+        };
+
+        const getRandomApiKey = () => {
+            const randomIndex = Math.floor(Math.random() * API_KEYS.length);
+            return API_KEYS[randomIndex];
+        };
+
+        if (event.messageReply && event.messageReply.attachments && event.messageReply.attachments.length > 0) {
+            shortUrl = await extractShortUrl();
+            const musicRecognitionResponse = await axios.get(`https://audio-recon-ahcw.onrender.com/kshitiz?url=${encodeURIComponent(shortUrl)}`);
+            title = musicRecognitionResponse.data.title;
+            const searchResponse = await axios.get(`https://youtube-kshitiz-gamma.vercel.app/yt?search=${encodeURIComponent(title)}`);
+            if (searchResponse.data.length > 0) {
+                videoId = searchResponse.data[0].videoId;
+            }
+
+            shortUrl = await shortenURL(shortUrl);
+        } else if (args.length === 0) {
+            message.reply("Please provide a video name or reply to a video or audio attachment.");
+            return;
+        } else {
+            title = args.join(" ");
+            const searchResponse = await axios.get(`https://youtube-kshitiz-gamma.vercel.app/yt?search=${encodeURIComponent(title)}`);
+            if (searchResponse.data.length > 0) {
+                videoId = searchResponse.data[0].videoId;
+            }
+
+            const videoUrlResponse = await axios.get(`https://mr-kshitizyt-hfhj.onrender.com/download?id=${encodeURIComponent(videoId)}&apikey=${getRandomApiKey()}`);
+            if (videoUrlResponse.data.length > 0) {
+                shortUrl = await shortenURL(videoUrlResponse.data[0]);
+            }
+        }
+
+        if (!videoId) {
+            message.reply("No video found for the given query.");
+            return;
+        }
+
+        const downloadResponse = await axios.get(`https://mr-kshitizyt-hfhj.onrender.com/download?id=${encodeURIComponent(videoId)}&apikey=${getRandomApiKey()}`);
+        const videoUrl = downloadResponse.data[0];
+
+        if (!videoUrl) {
+            message.reply("Failed to retrieve download link for the video.");
+            return;
+        }
+
+        const writer = fs.createWriteStream(path.join(__dirname, "cache", `${videoId}.mp3`));
+        const response = await axios({
+            url: videoUrl,
+            method: 'GET',
+            responseType: 'stream'
+        });
+
+        response.data.pipe(writer);
+
+        writer.on('finish', () => {
+            const videoStream = fs.createReadStream(path.join(__dirname, "cache", `${videoId}.mp3`));
+            message.reply({ body: `📹 Playing: ${title}`, attachment: videoStream });
+            api.setMessageReaction("✅", event.messageID, () => {}, true);
+        });
+
+        writer.on('error', (error) => {
+            console.error("Error:", error);
+            message.reply("Error downloading the video.");
+        });
+    } catch (error) {
+        console.error("Error:", error);
+        message.reply("An error occurred.");
+    }
+}
 
 module.exports = {
-  config: {
-    name: "song",
-    version: "1.0.1",
-    hasPermssion: 0,
-    credits: "SHAAN KHAN",
-    description: "Download YouTube song from keyword search and link",
-    commandCategory: "Media",
-    usages: "[songName] [type]",
-    cooldowns: 5,
-    dependencies: {
-      "node-fetch": "",
-      "yt-search": "",
+    config: {
+        name: "song", 
+        version: "1.0",
+        author: "Vex_Kshitiz",
+        countDown: 10,
+        role: 0,
+        shortDescription: "play audio from youtube",
+        longDescription: "play audio from youtube support audio recognition.",
+        category: "music",
+        guide: "{p} audio videoname / reply to audio or video" 
     },
-  },
-
-  run: async function ({ api, event, args }) {
-    let songName, type;
-
-    if (
-      args.length > 1 &&
-      (args[args.length - 1] === "audio" || args[args.length - 1] === "video")
-    ) {
-      type = args.pop();
-      songName = args.join(" ");
-    } else {
-      songName = args.join(" ");
-      type = "audio";
+    onStart: function ({ api, event, args, message }) {
+        return video(api, event, args, message);
     }
-
-    const processingMessage = await api.sendMessage(
-      "✅ Apki request jari Hai Please wait...",
-      event.threadID,
-      null,
-      event.messageID
-    );
-
-    try {
-      // Search for the song on YouTube
-      const searchResults = await ytSearch(songName);
-      if (!searchResults || !searchResults.videos.length) {
-        throw new Error("No results found for your search query.");
-      }
-
-      // Get the top result from the search
-      const topResult = searchResults.videos[0];
-      const videoId = topResult.videoId;
-
-      // Construct API URL for downloading the top result
-      const apiKey = "priyansh-here";
-      const apiUrl = `https://priyansh-ai.onrender.com/youtube?id=${videoId}&type=${type}&apikey=${apiKey}`;
-
-      api.setMessageReaction("⌛", event.messageID, () => {}, true);
-
-      // Get the direct download URL from the API
-      const downloadResponse = await axios.get(apiUrl);
-      const downloadUrl = downloadResponse.data.downloadUrl;
-
-      // Set request headers
-      const headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-        'Accept': '*/*',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Referer': 'https://cnvmp3.com/',
-        'Cookie': '_ga=GA1.1.1062081074.1735238555; _ga_MF283RRQCW=GS1.1.1735238554.1.1.1735239728.0.0.0',
-      };
-
-      const response = await fetch(downloadUrl, { headers });
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch song. Status code: ${response.status}`);
-      }
-
-      // Set the filename based on the song title and type
-      const filename = `${topResult.title}.${type === "audio" ? "mp3" : "mp4"}`;
-      const downloadPath = path.join(__dirname, filename);
-
-      const songBuffer = await response.buffer();
-
-      // Save the song file locally
-      fs.writeFileSync(downloadPath, songBuffer);
-
-      api.setMessageReaction("✅", event.messageID, () => {}, true);
-
-      await api.sendMessage(
-        {
-          attachment: fs.createReadStream(downloadPath),
-          body: `🖤 Title: ${topResult.title}\n\n        𓆩»»𝑶𝑾𝑵𝑬𝑹««★™»»𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵 
-𝘠𝘌 𝘓𝘖 𝘉𝘈𝘉𝘠 𝘈𝘗𝘒𝘐  ${type === "audio" ? "audio" : "video"} 🎧:`,
-        },
-        event.threadID,
-        () => {
-          fs.unlinkSync(downloadPath);
-          api.unsendMessage(processingMessage.messageID);
-        },
-        event.messageID
-      );
-    } catch (error) {
-      console.error(`Failed to download and send song: ${error.message}`);
-      api.sendMessage(
-        `Failed to download song: ${error.message}`,
-        event.threadID,
-        event.messageID
-      );
-    }
-  },
-}
+};
