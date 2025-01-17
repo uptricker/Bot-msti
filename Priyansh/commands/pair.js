@@ -2,8 +2,8 @@ module.exports.config = {
   name: "pair",
   version: "1.0.1",
   hasPermssion: 0,
-  credits: "SHAAN KHAN",
-  description: "MADE BY SHAAN",
+  credits: "ARIF BABU",
+  description: "MADE BY ARIF BABU",
   commandCategory: "Picture",
   cooldowns: 5,
   dependencies: {
