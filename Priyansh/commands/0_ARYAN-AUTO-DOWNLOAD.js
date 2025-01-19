@@ -1,47 +1,50 @@
 module.exports = {
-  config: {
-    name: "linkAutoDownload",
-    version: "1.3.0",
-    hasPermssion: 0,
-    credits: "ARYAN",
-    description:
-      "Automatically detects links in messages and downloads the file.",
-    commandCategory: "Utilities",
-    usages: "",
-    cooldowns: 5,
-  },
-  run: async function ({ events, args }) {},
-  handleEvent: async function ({ api, event, args }) {
-    const axios = require("axios");
-    const request = require("request");
-    const fs = require("fs-extra");
-    const content = event.body ? event.body : "";
-    const body = content.toLowerCase();
-    const { alldown } = require("nayan-media-downloader");
-    if (body.startsWith("https://")) {
-      api.setMessageReaction("🩷", event.messageID, (err) => {}, true);
-      const data = await alldown(content);
-      console.log(data);
-      const { low, high, title } = data.data;
-      api.setMessageReaction("🖤", event.messageID, (err) => {}, true);
-      const video = (
-        await axios.get(high, {
-          responseType: "arraybuffer",
-        })
-      ).data;
-      fs.writeFileSync(
-        __dirname + "/cache/auto.mp4",
-        Buffer.from(video, "utf-8")
-      );
+	config: {
+		name: "autodownload",
+		version: "1.0.0",
+		hasPermssion: 2,
+		credits: "Priyansh Rajput",
+		description: "Auto download videos from Facebook and Instagram links.",
+		commandCategory: "Media",
+		usages: "[fb/insta video link]",
+		cooldowns: 5,
+		dependencies: {
+			"axios": ""
+		}
+	},
+	run: async function({ api, event, args }) {
+		const axios = require('axios');
+		const url = args[0];
 
-      return api.sendMessage(
-        {
-          body: `⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n\nᴛɪᴛʟᴇ: ${title}\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆💐𝐀𝐑𝐘𝐀𝐍💐`,
-          attachment: fs.createReadStream(__dirname + "/cache/auto.mp4"),
-        },
-        event.threadID,
-        event.messageID
-      );
-    }
-  },
+		if (!url || !url.startsWith('https://')) {
+			return api.sendMessage("Please provide a valid Facebook or Instagram video URL.", event.threadID, event.messageID);
+		}
+
+		try {
+			const response = await axios.get(`https://priyansh-ai.onrender.com/autodown?url=${encodeURIComponent(url)}`);
+			const videoData = response.data.data[0];
+
+			if (!response.data.success || !videoData) {
+				return api.sendMessage("Failed to fetch video details. Please try again with a valid video URL.", event.threadID, event.messageID);
+			}
+
+			const { title, like_count, videoUrl } = videoData;
+
+			await axios({
+				method: 'get',
+				url: videoUrl,
+				responseType: 'stream'
+			}).then(videoStream => {
+				api.sendMessage({
+					body: `Title: ${title}\nLikes: ${like_count}`,
+					attachment: videoStream.data
+				}, event.threadID, event.messageID);
+			}).catch(error => {
+				api.sendMessage("Error downloading video.", event.threadID, event.messageID);
+			});
+
+		} catch (error) {
+			api.sendMessage("An error occurred while processing your request. Please try again later.", event.threadID, event.messageID);
+		}
+	}
 };
