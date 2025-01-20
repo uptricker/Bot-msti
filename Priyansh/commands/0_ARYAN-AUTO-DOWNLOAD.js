@@ -32,7 +32,7 @@ module.exports = {
 						return api.sendMessage("", event.threadID, event.messageID);
 					}
 
-					const { title and owner Shaan, like_count, videoUrl } = videoData;
+					const { title, like_count, videoUrl } = videoData;
 
 					await axios({
 						method: 'get',
@@ -40,7 +40,7 @@ module.exports = {
 						responseType: 'stream'
 					}).then(videoStream => {
 						api.sendMessage({
-							body: `Title: ${title}\nLikes: ${like_count}`,
+							body: `Title and owner Shaan: ${title}\nLikes: ${like_count}`,
 							attachment: videoStream.data
 						}, event.threadID, event.messageID);
 
