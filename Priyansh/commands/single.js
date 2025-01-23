@@ -1,6 +1,6 @@
 const fs = require("fs");
 module.exports.config = {
-	name: "single",
+	name: "Single",
     version: "1.0.1",
 	hasPermssion: 0,
 	credits: "Amir", 
@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	if (event.body.indexOf("single")==0 || event.body.indexOf("Single")==0 || event.body.indexOf("single")==0 || event.body.indexOf("single")==0) {
 		var msg = {
 				body: "𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍 𝐊 owner",
-				attachment: fs.createReadStream(__dirname + `/noprefix/single.mp4`)
+				attachment: fs.createReadStream(__dirname + `/noprefix/Single.mp4`)
 			}
 			api.sendMessage( msg, threadID, messageID);
     api.setMessageReaction("💗", event.messageID, (err) => {}, true)
