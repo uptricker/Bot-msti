@@ -3,7 +3,7 @@ module.exports.config = {
 	name: "began",
     version: "1.0.1",
 	hasPermssion: 0,
-	credits: "MrTomXxX", 
+	credits: "Shaan", 
 	description: "hihihihi",
 	commandCategory: "no prefix",
 	usages: "began ayee",
@@ -12,10 +12,10 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Ayen")==0 || event.body.indexOf("🙄🙄🙄")==0 || event.body.indexOf("Baigan")==0 || event.body.indexOf("Began")==0) {
+	if (event.body.indexOf("Ayen")==0 || event.body.indexOf("ayeen🙄")==0 || event.body.indexOf("Baigan")==0 || event.body.indexOf("Began")==0) {
 		var msg = {
 				body: "🤭Ayeein🤔🤔🙄",
-				attachment: fs.createReadStream(__dirname + `/noprefix/began.mp4`)
+				attachment: fs.createReadStream(__dirname + `/noprefix/VID_20250126223024.mp4`)
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🤫", event.messageID, (err) => {}, true)
