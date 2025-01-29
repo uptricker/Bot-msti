@@ -1,47 +1,57 @@
+const axios = require("axios");
+const fs = require("fs-extra");
+const path = require("path");
+const { alldown } = require("nayan-videos-downloader");
+
 module.exports = {
   config: {
     name: "linkAutoDownload",
     version: "1.3.0",
     hasPermssion: 0,
-    credits: "SHAAN KHAN",
-    description:
-      "Automatically detects links in messages and downloads the file.",
+    credits: "uzairrajput",
+    description: "Automatically detects links in messages and downloads the file.",
     commandCategory: "Utilities",
     usages: "",
-    cooldowns: 5,
+    cooldowns: 5
   },
-  run: async function ({ events, args }) {},
-  handleEvent: async function ({ api, event, args }) {
-    const axios = require("axios");
-    const request = require("request");
-    const fs = require("fs-extra");
-    const content = event.body ? event.body : "";
-    const body = content.toLowerCase();
-    const { alldown } = require("nayan-videos-downloader");
-    if (body.startsWith("https://")) {
-      api.setMessageReaction("❣️", event.messageID, (err) => {}, true);
-      const data = await alldown(content);
-      console.log(data);
-      const { low, high, title } = data.data;
-      api.setMessageReaction("💗", event.messageID, (err) => {}, true);
-      const video = (
-        await axios.get(high, {
-          responseType: "arraybuffer",
-        })
-      ).data;
-      fs.writeFileSync(
-        __dirname + "/cache/auto.mp4",
-        Buffer.from(video, "utf-8")
-      );
 
-      return api.sendMessage(
+  run: async function ({ events, args }) {
+    // Empty run function
+  },
+
+  handleEvent: async function ({ api, event }) {
+    let messageText = event.body ? event.body.toLowerCase() : "";
+
+    // Agar message kisi link se start hota hai to process karo
+    if (messageText.startsWith("https://")) {
+      // Reaction lagao "📿"
+      api.setMessageReaction("📿", event.messageID, () => {}, true);
+
+      // Link ka data fetch karo
+      const videoData = await alldown(messageText);
+      console.log(videoData);
+
+      const { low, high, title } = videoData.data;
+
+      // Reaction lagao "❤️‍🩹"
+      api.setMessageReaction("❤️‍🩹", event.messageID, () => {}, true);
+
+      // High-quality link ka data lo
+      const videoBuffer = (await axios.get(high, { responseType: "arraybuffer" })).data;
+
+      // File ko save karo cache folder mein
+      const filePath = path.join(__dirname, "/cache/auto.mp4");
+      fs.writeFileSync(filePath, Buffer.from(videoBuffer, "utf-8"));
+
+      // File ko bhejo
+      api.sendMessage(
         {
-          body: `✨❁ ━━ ━[ ★»𝑶𝑾𝑵𝑬𝑹★«]━ ━━ ❁✨\n\nᴛɪᴛʟᴇ: ${title}\n\n✨❁ ━━ ━[ ™»𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵✓« ]━ ━━ ❁✨`,
-          attachment: fs.createReadStream(__dirname + "/cache/auto.mp4"),
+          body: `✨❁━━━[ 𝑺𝑯𝑨𝑨𝑵 ]━━━❁✨\n\nᴛɪᴛʟᴇ: ${title}\n\n✨❁━━━[ 𝑲𝑯𝑨𝑵 💚✨ ]━━━❁✨`,
+          attachment: fs.createReadStream(filePath)
         },
         event.threadID,
         event.messageID
       );
     }
-  },
+  }
 };
