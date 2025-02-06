@@ -2,7 +2,7 @@ module.exports.config = {
     name: "married",
     version: "3.1.1",
     hasPermssion: 0,
-    credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
+    credits: "uzairrajput",
     description: "married",
     commandCategory: "img",
     usages: "[@mention]",
@@ -69,6 +69,6 @@ module.exports.run = async function ({ event, api, args }) {
     if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
     else {
         const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "𝐽𝑜 𝑀𝑖𝑦𝑎 𝐵𝑖𝑤𝑖 𝐷𝑢𝑛𝑖𝑦𝑎 𝑀𝑒 𝑃𝑖𝑦𝑎𝑟 𝑀𝑜ℎ𝑎𝑏𝑏𝑎𝑡 𝐶 𝑅𝑎ℎ𝑒𝑛𝑔𝑒..\n\n𝐴𝑙𝑙𝑎ℎ 𝑈𝑛ℎ𝑒 𝐽𝑎𝑛𝑛𝑎𝑡 𝑀𝑒 𝐵ℎ𝑖 𝑆𝑎𝑡ℎ 𝑅𝑎𝑘ℎ𝑒𝑛𝑔𝑒.. 🥺❤️💯✨\n\n‎🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀  𝑺𝑯𝑨𝑨𝑵 💚✨", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
       }
