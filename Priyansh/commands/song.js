@@ -55,7 +55,7 @@ thumbnails.push(diptoSt(info.thumbnail,'photo.jpg'));
       msg += `${i++}. ${info.title}\nTime: ${info.time}\nChannel: ${info.channel.name}\n\n`;
     }
     api.sendMessage({
-      body: msg+ "Apni song ka reply karo our chus karo Kisi ek option ko",
+      body: msg+ "Reply to this message with a number want to listen",
       attachment: await Promise.all(thumbnails)
     },event.threadID, (err, info) => {
 global.client.handleReply.push({
