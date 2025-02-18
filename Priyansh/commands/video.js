@@ -20,7 +20,7 @@ module.exports.run = async function ({ api, event, args }) {
 
   try {
     const query = args.join(" ");
-    const findingMessage = await api.sendMessage(`🔍 | "${query}" Song dhondh Kar send karta hun...`, event.threadID);
+    const findingMessage = await api.sendMessage(`🔍 | "${query}" Song dhondh Kar send karti hun...`, event.threadID);
 
     const searchResults = await yts(query);
     const firstResult = searchResults.videos[0];
@@ -64,7 +64,7 @@ module.exports.run = async function ({ api, event, args }) {
       }
 
       await api.sendMessage({
-        body: `🎥 | Apki video ko"${title}" download karliya gaya hai!\ncredit SHAAN`,
+        body: `🎥 | Apki video ko"${title}" download karliya gaya hai!\n𝑪𝑹𝑬𝑨𝑻𝑬: 𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵💞`,
         attachment: fs.createReadStream(filePath)
       }, event.threadID);
 
