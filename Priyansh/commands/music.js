@@ -36,7 +36,7 @@ module.exports = {
     }
 
     const processingMessage = await api.sendMessage(
-      "✅ Apki request jari hai. Please wait...",
+      "✅ Apki Request Jari Hai. Please wait...",
       event.threadID,
       null,
       event.messageID
@@ -60,7 +60,7 @@ module.exports = {
 
       // Get the direct download URL from the API
       const downloadResponse = await axios.get(apiUrl);
-      const downloadUrl = downloadResponse.data.downloadUrl; // Assuming the API response contains the 'url' field for download
+      const downloadUrl = downloadResponse.data.result.downloadUrl; // Assuming the API response contains the 'url' field for download
 
       // Set the filename based on the song title and type
       const safeTitle = topResult.title.replace(/[^a-zA-Z0-9 \-_]/g, ""); // Clean the title
@@ -100,9 +100,8 @@ module.exports = {
       await api.sendMessage(
         {
           attachment: fs.createReadStream(downloadPath),
-          body: `🖤 Title: ${topResult.title}\n\n »»𝐎𝐖𝐍𝐄𝐑 ««★𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵™✓
-💞𝙔𝙀 𝙇𝙊 𝘽𝘼𝘽𝙔 𝘼𝙋𝙆𝙄 ❣️
-${
+          body: `🖤 Title: ${topResult.title}\n\n»»𝐎𝐖𝐍𝐄𝐑 ««★𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵™✓
+💞𝙔𝙀 𝙇𝙊 𝘽𝘼𝘽𝙔 𝘼𝙋𝙆𝙄 ❣️ ${
             type === "audio" ? "audio" : "video"
           } 🎧:`,
         },
