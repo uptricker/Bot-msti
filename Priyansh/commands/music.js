@@ -36,7 +36,7 @@ module.exports = {
     }
 
     const processingMessage = await api.sendMessage(
-      "✅ Apki Request Jari Hai. Please wait...",
+      "✅ Apki request Jari Please wait...",
       event.threadID,
       null,
       event.messageID
@@ -100,8 +100,8 @@ module.exports = {
       await api.sendMessage(
         {
           attachment: fs.createReadStream(downloadPath),
-          body: `🖤 Title: ${topResult.title}\n\n»»𝐎𝐖𝐍𝐄𝐑 ««★𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵™✓
-💞𝙔𝙀 𝙇𝙊 𝘽𝘼𝘽𝙔 𝘼𝙋𝙆𝙄 ❣️ ${
+          body: `🖤 Title: ${topResult.title}\n\n  »»𝑶𝑾𝑵𝑬𝑹««★™  »»𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵««
+          🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰💞  ${
             type === "audio" ? "audio" : "video"
           } 🎧:`,
         },
