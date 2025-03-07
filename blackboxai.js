@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 module.exports.config = {
-  name: "blackboxai",
+  name: "ShonaAi",
   version: "1.3.0",
   hasPermission: 0,
   credits: "Priyansh Rajput",
@@ -28,9 +28,9 @@ module.exports.handleEvent = async function ({ api, event }) {
   // If the user is replying to the bot's message, continue the conversation
   if (messageReply && messageReply.senderID === api.getCurrentUserID()) {
     userMemory[senderID].history.push({ sender: "user", message: userQuery });
-  } else if (body.toLowerCase().includes("hercai")) {
+  } else if (body.toLowerCase().includes("blackboxai")) {
     // If "hercai" is mentioned, treat it as a new query
-    const cleanedQuery = body.toLowerCase().replace("hercai", "").trim();
+    const cleanedQuery = body.toLowerCase().replace("blackboxai", "").trim();
     userMemory[senderID].history.push({ sender: "user", message: cleanedQuery });
   } else {
     return;
@@ -77,10 +77,10 @@ module.exports.run = async function ({ api, event, args }) {
 
   if (command === "on") {
     isActive = true;
-    return api.sendMessage("✅ Hercai bot अब सक्रिय है।", threadID, messageID);
+    return api.sendMessage("✅ blackboxai bot अब सक्रिय है।", threadID, messageID);
   } else if (command === "off") {
     isActive = false;
-    return api.sendMessage("⚠️ Hercai bot अब निष्क्रिय है।", threadID, messageID);
+    return api.sendMessage("⚠️ blackboxai bot अब निष्क्रिय है।", threadID, messageID);
   } else if (command === "clear") {
     // Clear history for all users
     if (args[1] && args[1].toLowerCase() === "all") {
@@ -100,7 +100,7 @@ module.exports.run = async function ({ api, event, args }) {
   const userQuery = args.join(" ");
 
   if (!userQuery) {
-    return api.sendMessage("❓ कृपया अपना सवाल पूछें! Example: hercai कैसे हो?", threadID, messageID);
+    return api.sendMessage("❓ कृपया अपना सवाल पूछें! Example: blackboxai कैसे हो?", threadID, messageID);
   }
 
   // Initialize memory for the user if not already present
@@ -111,7 +111,7 @@ module.exports.run = async function ({ api, event, args }) {
 
   // Take only the last 3 messages for context
   const recentConversation = userMemory[senderID].history.slice(-20).map(
-    (msg) => `${msg.sender === "user" ? "User" : "Hercai"}: ${msg.message}`
+    (msg) => `${msg.sender === "user" ? "User" : "blackboxai"}: ${msg.message}`
   ).join("\n");
 
   const apiURL = `https://priyansh-ai.onrender.com/api/blackboxai?query=${encodeURIComponent(recentConversation)}`;
