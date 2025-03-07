@@ -1,11 +1,11 @@
 const axios = require("axios");
 
 module.exports.config = {
-  name: "hercai",
+  name: "blackboxai",
   version: "1.3.0",
   hasPermission: 0,
-  credits: "SHANKAR SIR",
-  description: "Hercai bot with memory and context-aware conversation.",
+  credits: "Priyansh Rajput",
+  description: "blackboxai bot with memory and context-aware conversation.",
   commandCategory: "AI",
   usages: "[your question]",
   cooldowns: 5,
@@ -41,13 +41,13 @@ module.exports.handleEvent = async function ({ api, event }) {
     (msg) => `${msg.sender === "" ? "" : ""}: ${msg.message}`
   ).join("\n");
 
-  const apiURL = `https://api-shankar-sir-s26r.onrender.com/api/ai?ask=${encodeURIComponent(recentConversation)}`;
+  const apiURL = `https://priyansh-ai.onrender.com/api/blackboxai?query=${encodeURIComponent(recentConversation)}`;
 
   try {
     const response = await axios.get(apiURL);
 
-    if (response && response.data && response.data.reply) {
-      const botReply = response.data.reply;
+    if (response && response.data && response.data.priyansh) {
+      const botReply = response.data.priyansh;
 
       // Add the bot's response to the conversation history
       userMemory[senderID].history.push({ sender: "bot", message: botReply });
@@ -114,13 +114,13 @@ module.exports.run = async function ({ api, event, args }) {
     (msg) => `${msg.sender === "user" ? "User" : "Hercai"}: ${msg.message}`
   ).join("\n");
 
-  const apiURL = `https://api-shankar-sir-s26r.onrender.com/api/ai?ask=${encodeURIComponent(recentConversation)}`;
+  const apiURL = `https://priyansh-ai.onrender.com/api/blackboxai?query=${encodeURIComponent(recentConversation)}`;
 
   try {
     const response = await axios.get(apiURL);
 
-    if (response && response.data && response.data.reply) {
-      const botReply = response.data.reply;
+    if (response && response.data && response.data.priyansh) {
+      const botReply = response.data.priyansh;
 
       // Add the bot's response to the conversation history
       userMemory[senderID].history.push({ sender: "bot", message: botReply });
