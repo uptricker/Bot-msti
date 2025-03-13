@@ -444,13 +444,13 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   if ((event.body.toLowerCase() == "🙉🙉")) {return api.sendMessage("Muje pata h tum 👉 🐒 Bander ho 😜😜", threadID);
      };
 
-  if ((event.body.toLowerCase() == "🙊")) {return api.sendMessage("Muje pata h tum 👉 🐒 Bander ho 😀😀", threadID);
+  if ((event.body.toLowerCase() == "🙊")) {return api.sendMessage("bander Ka muu wala has mat", threadID);
      };
 
-  if ((event.body.toLowerCase() == "🙉")) {return api.sendMessage("Muje pata h tum 👉 🐒 Bander ho 🤣", threadID);
+  if ((event.body.toLowerCase() == "sharati Ladki ")) {return api.sendMessage("Are wo cute hai sharthi hai 🤣", threadID);
      };
 
-  if ((event.body.toLowerCase() == "🙈")) {return api.sendMessage("Muje pata h tum 👉🐒Bander ho🤣", threadID);
+  if ((event.body.toLowerCase() == "fatima")) {return api.sendMessage("FATIMA Boss BAHOT cute hai ❤️🥰", threadID);
      };
 
     if ((event.body.toLowerCase() == "🖤")) {return api.sendMessage("___)Ankho__🌿__m__🍒__pyar__💦dil___❣️__me__💥___khumar___🌹___pyar____🌿___toh____😴___nhi___💥___kar___🌿___mujhse____🌿🌹❣️__________________?🥰❣️❣️🥰❤️‍🩹 ", threadID);
