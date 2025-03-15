@@ -122,7 +122,8 @@ module.exports.languages = {
 		"on": "on",
 		"off": "off",
 		"successText": "success notification rankup!",
-		"levelup": "{name}, apka ek aur levelup ho geya hai  level {level}",
+		"levelup": "{name}, apka ek aur levelup ho geya hai  level
+◈━━━━━━━━━━━━━━━━💚✨\n\n{name}, ◈━━━━━━━━━━━━━━━━💚✨\n\nyour keyboard has reached level {level}◈━━━━━━━━━━━━━━━━💚✨\n\𝐌𝐀𝐃𝐄 𝐁𝐘 𝐒𝐇𝐀𝐀𝐍\n◈━━━━━━━━━━━━━━━━💚✨ {level}",
 	}
 }
 
