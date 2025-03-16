@@ -1,1 +1,27 @@
-var _0x1fd94d=_0x682b;function _0x682b(_0x32ae73,_0xaebcdc){var _0x56917d=_0x5691();return _0x682b=function(_0x682bef,_0x5e2011){_0x682bef=_0x682bef-0x184;var _0x3b319=_0x56917d[_0x682bef];return _0x3b319;},_0x682b(_0x32ae73,_0xaebcdc);}function _0x5691(){var _0x569185=['&client=tw-ob','media','text\x20to\x20voice','PREFIX','&tl=','2PmDcAe','1168GlGeaU','151349xYJkYy','fs-extra','senderID','indexOf','say\x20<lang>\x20text\x0a\x0aExample:\x0a','path','threadID','downloadFile','messageID','.mp3','57666BkZgtP','13401EuZQSq','utils','uzairrajput','say','say\x20fil\x20im\x20pretty\x0a\x0aNote:\x20please\x20use\x20a\x20shortcut\x20lang\x20<ru,\x20en,\x20ko,\x20ja,\x20fil>\x0a\x0alang\x27s\x20available:\x0a\x0afil\x20=\x20filipino\x0aja\x20=\x20japan\x0aru\x20=\x20russia\x0ako\x20=\x20korea\x0a','message_reply','5PFhUYp','join','slice','1138112VGFhYr','2504590ugztDs','cache','sendMessage','config','1.0.1','607428FyiwRP','108LHIvaZ','102568zglVoE','type','language','nodemodule','https://translate.google.com/translate_tts?ie=UTF-8&q=','body','messageReply','exports','log','564tliwRr'];_0x5691=function(){return _0x569185;};return _0x5691();}(function(_0x4dfcdd,_0x4c8a4a){var _0x42d227=_0x682b,_0x3efc36=_0x4dfcdd();while(!![]){try{var _0x11816e=-parseInt(_0x42d227(0x191))/0x1*(-parseInt(_0x42d227(0x1af))/0x2)+-parseInt(_0x42d227(0x1ad))/0x3+-parseInt(_0x42d227(0x1a7))/0x4*(parseInt(_0x42d227(0x1a4))/0x5)+-parseInt(_0x42d227(0x1ae))/0x6*(parseInt(_0x42d227(0x19d))/0x7)+parseInt(_0x42d227(0x192))/0x8*(-parseInt(_0x42d227(0x19e))/0x9)+parseInt(_0x42d227(0x1a8))/0xa+parseInt(_0x42d227(0x193))/0xb*(parseInt(_0x42d227(0x18b))/0xc);if(_0x11816e===_0x4c8a4a)break;else _0x3efc36['push'](_0x3efc36['shift']());}catch(_0x4be808){_0x3efc36['push'](_0x3efc36['shift']());}}}(_0x5691,0x23e4a),module[_0x1fd94d(0x189)]['config']={'name':_0x1fd94d(0x1a1),'version':_0x1fd94d(0x1ac),'hasPermssion':0x2,'credits':_0x1fd94d(0x1a0),'description':_0x1fd94d(0x18e),'commandCategory':_0x1fd94d(0x18d),'usages':'please\x20add\x20a\x20language\x20or\x20leave\x20it\x20blank\x0a\x0aHow\x20to\x20use?\x0a'+global['config']['PREFIX']+_0x1fd94d(0x197)+global[_0x1fd94d(0x1ab)][_0x1fd94d(0x18f)]+_0x1fd94d(0x1a2),'cooldowns':0x5,'dependencies':{'path':'','fs-extra':''}},module[_0x1fd94d(0x189)]['run']=async function({api:_0x17419c,event:_0x27c963,args:_0x11e81c}){var _0x33c305=_0x1fd94d;try{const {createReadStream:_0x5b2c73,unlinkSync:_0x2598ce}=global['nodemodule'][_0x33c305(0x194)],{resolve:_0x4b9e9a}=global[_0x33c305(0x185)][_0x33c305(0x198)];var _0x58fb77=_0x27c963[_0x33c305(0x1b0)]==_0x33c305(0x1a3)?_0x27c963[_0x33c305(0x188)][_0x33c305(0x187)]:_0x11e81c[_0x33c305(0x1a5)]('\x20'),_0x5e89ea=['ru','en','ko','ja','fil']['some'](_0x15c4ef=>_0x58fb77['indexOf'](_0x15c4ef)==0x0)?_0x58fb77[_0x33c305(0x1a6)](0x0,_0x58fb77[_0x33c305(0x196)]('\x20')):global['config'][_0x33c305(0x184)],_0x4693b3=_0x5e89ea!=global['config'][_0x33c305(0x184)]?_0x58fb77[_0x33c305(0x1a6)](0x3,_0x58fb77['length']):_0x58fb77;const _0x2fcf95=_0x4b9e9a(__dirname,_0x33c305(0x1a9),_0x27c963[_0x33c305(0x199)]+'_'+_0x27c963[_0x33c305(0x195)]+_0x33c305(0x19c));return await global[_0x33c305(0x19f)][_0x33c305(0x19a)](_0x33c305(0x186)+encodeURIComponent(_0x4693b3)+_0x33c305(0x190)+_0x5e89ea+_0x33c305(0x18c),_0x2fcf95),_0x17419c[_0x33c305(0x1aa)]({'attachment':_0x5b2c73(_0x2fcf95)},_0x27c963['threadID'],()=>_0x2598ce(_0x2fcf95),_0x27c963[_0x33c305(0x19b)]);}catch(_0x4db0ef){return console[_0x33c305(0x18a)](_0x4db0ef);};});
+module.exports.config = {
+	name: "say",
+	version: "1.0.2",
+	hasPermssion: 0,
+	credits: "Shaan",
+	description: "check the amount of yourself or the person tagged",
+	commandCategory: "without prefix",
+	usages: "[tag]",
+	cooldowns: 5
+};
+  
+  
+  
+  
+  
+  module.exports.run = async function({ api, event, args }) {
+	try {
+		const { createReadStream, unlinkSync } = global.nodemodule["fs-extra"];
+		const { resolve } = global.nodemodule["path"];
+		var content = (event.type == "message_reply") ? event.messageReply.body : args.join(" ");
+		var languageToSay = (["bn",].some(item => content.indexOf(item) == 0)) ? content.slice(0, content.indexOf(" ")) : global.config.language;
+		var msg = (languageToSay != global.config.language) ? content.slice(3, content.length) : content;
+		const path = resolve(__dirname, 'cache', `${event.threadID}_${event.senderID}.mp3`);
+		await global.utils.downloadFile(`https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(msg)}&tl=bn&client=tw-ob`, path);
+		return api.sendMessage({ attachment: createReadStream(path)}, event.threadID, () => unlinkSync(path));
+	} catch (e) { return console.log(e) };
+}
