@@ -17,5 +17,3 @@ module.exports.run = async function({api, event, args, utils, Users, Threads}) {
         let request = require("request");
         let {threadID, senderID, messageID} = event;
       if ((this.config.credits) != `${cred}`) { return api.sendMessage(`ulol change credits pa `, event.threadID, event.messageID)}
-      if (args.join().indexOf('@') !== -1){ var id = Object.keys(event.mentions) }
-      else var id = args[0] || event.senderID;
