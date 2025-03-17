@@ -16,7 +16,7 @@ let userMemory = {};
 let isActive = true;
 let userLanguage = {};
 
-// تائید شدہ زبانیں
+// समर्थित भाषाएँ
 const supportedLanguages = {
   bhojpuri: "bho", urdu: "ur", punjabi: "pa", nepali: "ne",
   english: "en", hindi: "hi", french: "fr", spanish: "es",
@@ -25,7 +25,7 @@ const supportedLanguages = {
   maithili: "mai", tamil: "ta", gujrati: "gu", sanskrit: "sa"
 };
 
-// **ترجمہ فنکشن**
+// **ट्रांसलेशन फ़ंक्शन**
 const translateText = async (text, targetLang) => {
   return new Promise((resolve, reject) => {
     request(
@@ -45,41 +45,41 @@ const translateText = async (text, targetLang) => {
   });
 };
 
-// **بوٹ کا مرکزی واقعہ**
+// **बॉट का मुख्य इवेंट**
 module.exports.handleEvent = async function ({ api, event }) {
   const { threadID, messageID, senderID, body, messageReply } = event;
   if (!isActive || !body) return;
 
   const lowerBody = body.toLowerCase();
 
-  // **زبان کی ترتیبات**
+  // **भाषा सेटिंग**
   if (supportedLanguages[lowerBody]) {
     userLanguage[senderID] = supportedLanguages[lowerBody];
-    return api.sendMessage(`✅ آپ کی زبان اب *${lowerBody}* مقرر کیا گیا ہے.`, threadID);
+    return api.sendMessage(`✅ आपकी भाषा अब *${lowerBody}* सेट कर दी गई है।`, threadID);
   }
 
-  // **اگر صارف نے بوٹ کے پیغام کا جواب نہیں دیا، تو کچھ نہ کریں۔**
+  // **अगर यूजर ने बॉट के मैसेज पर रिप्लाई नहीं किया, तो कुछ मत करो**
   if (!messageReply || messageReply.senderID !== api.getCurrentUserID()) return;
 
   const userQuery = body.trim();
 
-  // **لوڈ صارف کی تاریخ**
+  // **यूजर हिस्ट्री लोड करो**
   if (!userMemory[senderID]) userMemory[senderID] = [];
 
-  // **صارف کے پچھلے تبادلوں کو شامل کریں۔**
+  // **यूजर का पिछला कन्वर्सेशन जोड़ें**
   const conversationHistory = userMemory[senderID].join("\n");
   const fullQuery = conversationHistory + `\nUser: ${userQuery}\nBot:`;
 
-  // **API کال کریں (اب پچھلی چیٹس بھی بھیج رہے ہیں۔)**
+  // **API को कॉल करो (अब पिछली चैट भी भेज रहे हैं)**
   const apiURL = `https://shankar-gpt-3-api.vercel.app/api?message=${encodeURIComponent(fullQuery)}`;
 
   try {
     const response = await axios.get(apiURL);
-    let botReply = response.data.response || "مجھے سمجھنے میں دشواری ہو رہی ہے۔ کیا آپ اسے دہرا سکتے ہیں؟?";
+    let botReply = response.data.response || "मुझे समझने में दिक्कत हो रही है। क्या आप इसे दोहरा सकते हैं?";
 
     botReply = await translateText(botReply, userLanguage[senderID] || "hi");
 
-    // **صارف کی تاریخ ذخیرہ کریں (اب 15 پیغامات تک))**
+    // **यूजर की हिस्ट्री स्टोर करें (अब 15 मैसेज तक)**
     userMemory[senderID].push(`User: ${userQuery}`);
     userMemory[senderID].push(`Bot: ${botReply}`);
     if (userMemory[senderID].length > 15) userMemory[senderID].splice(0, 2);
@@ -93,31 +93,31 @@ module.exports.handleEvent = async function ({ api, event }) {
     }, threadID, messageID);
   } catch (error) {
     console.error("API Error:", error.message);
-    return api.sendMessage("❌ AI سے جواب حاصل کرنے میں ایک مسئلہ تھا۔ براہ کرم بعد میں کوشش کریں۔", threadID, messageID);
+    return api.sendMessage("❌ AI से जवाब लाने में समस्या हुई। कृपया बाद में प्रयास करें।", threadID, messageID);
   }
 };
 
-// **بوٹ کمانڈز**
+// **बॉट के कमांड**
 module.exports.run = async function ({ api, event, args }) {
   const { threadID, messageID, senderID } = event;
   const command = args[0] && args[0].toLowerCase();
 
   if (command === "on") {
     isActive = true;
-    return api.sendMessage("✅ Hercai bot یہ اب فعال ہے۔", threadID, messageID);
+    return api.sendMessage("✅ Hercai bot अब सक्रिय है।", threadID, messageID);
   } else if (command === "off") {
     isActive = false;
-    return api.sendMessage("⚠️ Hercai bot اب غیر فعال۔", threadID, messageID);
+    return api.sendMessage("⚠️ Hercai bot अब निष्क्रिय है।", threadID, messageID);
   } else if (command === "clear") {
     if (args[1] && args[1].toLowerCase() === "all") {
       userMemory = {};
-      return api.sendMessage("🧹 تمام صارفین کی گفتگو کی سرگزشت صاف کر دی گئی ہے۔", threadID, messageID);
+      return api.sendMessage("🧹 सभी उपयोगकर्ताओं की बातचीत की हिस्ट्री क्लियर कर दी गई है।", threadID, messageID);
     }
     if (userMemory[senderID]) {
       delete userMemory[senderID];
-      return api.sendMessage("🧹 آپ کی گفتگو کی سرگزشت صاف کر دی گئی ہے۔", threadID, messageID);
+      return api.sendMessage("🧹 आपकी बातचीत की हिस्ट्री क्लियर कर दी गई है।", threadID, messageID);
     } else {
-      return api.sendMessage("⚠️ آپ کے پاس پہلے سے موجود کوئی تاریخ نہیں ہے۔", threadID, messageID);
+      return api.sendMessage("⚠️ आपकी कोई भी हिस्ट्री पहले से मौजूद नहीं है।", threadID, messageID);
     }
   }
 };
