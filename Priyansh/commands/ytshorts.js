@@ -22,14 +22,14 @@ module.exports.handleEvent = async function ({ api, event }) {
     const url = match[0];
 
     try {
-      const findingMessage = await api.sendMessage(`⏳ | शॉर्ट वीडियो डाउनलोड लिंक प्राप्त किया जा रहा है...`, event.threadID);
+      const findingMessage = await api.sendMessage(`⏳ | مختصر ویڈیو ڈاؤن لوڈ لنک حاصل کرنا...`, event.threadID);
 
       const apiUrl = `https://mr-prince-malhotra-ytdl.vercel.app/video?url=${encodeURIComponent(url)}`;
       const response = await axios.get(apiUrl);
       const responseData = response.data;
 
       if (!responseData.result || !responseData.result.url) {
-        await api.sendMessage(`❌ | शॉर्ट वीडियो के लिए कोई डाउनलोड लिंक नहीं मिला।`, event.threadID);
+        await api.sendMessage(`❌ | مختصر ویڈیو کے لیے کوئی ڈاؤن لوڈ لنک نہیں ملا۔`, event.threadID);
         return;
       }
 
@@ -50,13 +50,13 @@ module.exports.handleEvent = async function ({ api, event }) {
         const fileSizeInMB = stats.size / (1024 * 1024);
 
         if (fileSizeInMB > 25) {
-          await api.sendMessage(`❌ | "${title}" का साइज ${fileSizeInMB.toFixed(2)}MB है, जो 25MB से ज्यादा है।\n📥 डाउनलोड लिंक: ${downloadUrl}`, event.threadID);
+          await api.sendMessage(`❌ | "${title}" کا سائز ${fileSizeInMB.toFixed(2)}MB جو کہ 25MB سے زیادہ ہے۔\n📥 ڈاؤن لوڈ لنک: ${downloadUrl}`, event.threadID);
           fs.unlinkSync(filePath);
           return;
         }
 
         await api.sendMessage({
-          body: `🎥 | आपका शॉर्ट वीडियो "${title}" डाउनलोड हो गया है!`,
+          body: `🎥 | آپ کی مختصر ویڈیو "${title}" اسے ڈاؤن لوڈ کر دیا گیا ہے!`,
           attachment: fs.createReadStream(filePath)
         }, event.threadID);
 
@@ -66,13 +66,13 @@ module.exports.handleEvent = async function ({ api, event }) {
 
       videoResponse.data.on("error", async (error) => {
         console.error(error);
-        await api.sendMessage(`❌ | शॉर्ट वीडियो डाउनलोड करने में समस्या हुई: ${error.message}`, event.threadID);
+        await api.sendMessage(`❌ | مختصر ویڈیو ڈاؤن لوڈ کرنے میں ایک مسئلہ تھا۔: ${error.message}`, event.threadID);
         fs.unlinkSync(filePath);
       });
 
     } catch (error) {
       console.error(error.response ? error.response.data : error.message);
-      await api.sendMessage(`❌ | शॉर्ट वीडियो प्राप्त करने में समस्या हुई: ${error.response ? error.response.data : error.message}`, event.threadID);
+      await api.sendMessage(`❌ | مختصر ویڈیو حاصل کرنے میں ایک مسئلہ تھا۔: ${error.response ? error.response.data : error.message}`, event.threadID);
     }
   }
 };
