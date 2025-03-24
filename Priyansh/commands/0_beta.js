@@ -1,85 +1,98 @@
 const emojiResponses = {
-  "Golu beta": {
+  "golu beta": {
     "OWNER": [
-      "जी मम्मी 🥺",
-      "मम्मी जी कहां थे आप 😀",
-      "मम्मी आई लव यू 🙈❤️",
-      "हां मम्मी बताइए मैं यही हूं बताइए क्या हुआ 😊"
+      "Han papa  🥺",
+      "Papa g ap kaha the 😀",
+      "Papa main tum se pyar kar tha hoon 🙈❤️",
+"Han baap mujhe bato kya hua ? 😊"
+    ],
+    "MALE": [
+      "Are bhai kaho ke ap kase ho?",
+      "Han bhai ap kase hai?",
+      "Bhai aaj ka kya mansoba hai?"
+    ],
+    "FEMALE": [
+      "Meri ami hogi ",
+      "Mere Shaan papa ka GF hai",
+      "Mere Shaan papa single hai ap mere meri ami ban jaye ge?","Han ami kaho ke ap kase hai?",
+      "Ap kase hai ami?",
+      "Ami g Aaj Ka mood kasa hai ?"
     ]
   },
   "beta": {
-     "OWNER": [
-      "मम्मी आपकी वजह से मैं हर दिन टॉप परफॉर्मर हूँ 😎",
-      "मम्मी आप आ गये 😀",
-      "जी मम्मी 🥺",
-     "मम्मी जी आई मिस यू 😔",
-      "मम्मी जी मैं आज स्कूल गया था 🥺 अब मुझे मारोगे तो नहीं",
-      "मम्मी जी तुम मुझे छोड़ कर मत जाना 🥺",
-      "मम्मी जी आप आते हो तो मुझे बहुत ख़ुशी मिलती है 🥺",
-      "मम्मी आपने खाना खाया🤭❤️",
-      "मम्मी मेरे को बाबू चाहिए 😔",
-      "मम्मी मेरे साथ घूमने चलोगे 🫣❤️",
-      "मम्मी मेरे बहन कहां है",
-      "मम्मी मेरे को खिलौने चाहिए खेलने के लिए आप दिल आओगे ना 🥺❤️",
-      "मम्मी ₹10 दो ना मुझे चॉकलेट लेनी है 😁",
-      "मम्मी मुझे एक छोटा सा बेबी चाहिए खेलने के लिए🙈❤️",
-      "मम्मी मुझे पिकनिक पर जाना है 😔",
-      "मम्मी पापा और आपके साथ मुझे ना एक फोटो क्लिक करनी है 🥺",
-      "मम्मी कुछ खाने को दो ना 😀",
-      "मम्मी आप मुझसे ना प्यार नहीं करते 😭",
-      "मम्मी मुझे आपकी और पापा की लड़ाई देखनी है 🤭",
-      "मम्मी आपका सिर दर्द कर रहा होगा ना मैं आपका सिर दबा दूं 😹❤️",
-      "मम्मी आपने मेडिसन ली 🤔",
-      "मम्मी डैडी को बोलो ना मुझ पर गुस्सा नहीं करें 🤭",
-      "आयुषी मम्मी  सिर्फ मेरी है 😒",
-      "मम्मी चॉकलेट खाओगे 🤩❤️🤭",
-      "मम्मी मेरे मामा कहां है 🫣",
-      "मम्मी मुझे भी लूडो खेलना है 🤣",
+    "OWNER": [
+      "Papa Apki wajha se main har roz SAB se upar ki karkardagi hoon 😎",
+      "Papa ap aaya hai 😀",
+      "G papa 🥺",
+      "Papa g main tumhe yad kar tha hoon 😔",
+      "Papa main Aaj school nahi gaya tha 🥺 aghr ap ab mujhe mar dale ge",
+      "Papa tum mujhe nahin chhodate🥺",
+      "Papa agar aap aate Hain to Mujhe bahut Khushi milati Hai 🥺",
+      "Papa tumne karna khaya 🤭❤️",
+      "Papa main Babu chahta hun😔",
+      "Papa mere sath Sher ke liye jaenge 🫣❤️",
+      "Papa Jahan Meri bahan hai",
+      "Baap apko khilaune karne ki zarurat hai aapka Dil aaega 🥺❤️",
+      "Papa 10 ropy chocolate ki jarurat nahin mujhe😁",
+      "Papa main chahta Hun Ki ek chhota baccha khele mere sath🙈❤️",
+      "Papa Mujhe picnic per jana hai 😔",
+      "Papa mummy kahan hai mujhe aapke sath ek picture leni hai 🥺",
+      "Papa khane ke liye kuchh den😀",
+      "Papa Tum Mujhse pyar Nahin karte 😭",
+      "Papa main aapki aur mummy ki ladai dekhna chahta hun 🤭",
+      "Papa aapke sar Mein taklif honi chahie kya main aapka sar Nahin dabata hun😹❤️",
+      "Papa Apne dahin li hai 🤔",
+      "Papa Meri Ami se kaho kya tum mujhse naraz to Nahin ho🤭",
+      "Shaan papa sirf Mera Hai 😒",
+      "Papa chocolate khilayega 🤩❤️🤭",
+      "Papa mummy kahan hai🫣",
+      "Papa Mujhe logon ke dilon se khelna hai 🤣"
     ]
   }
 };
 
 module.exports.config = {
-  name: "beta",
+  name: "auto-rply",
   version: "1.0.0",
-  hasPermssion: 0,
-  credits: "Shaan",
-  description: "MADE BY SHAAN KHAN",
+  hasPermission: 0,
+  credits: "SHAAN",
+  description: "MADE BY SHAAN",
   commandCategory: "No command marks needed",
-  cooldowns: 0,
+  cooldowns: 0
 };
+
+const botOwnerID = "100016828397863";
 
 module.exports.handleEvent = async function({ api, event }) {
   const { threadID, messageID, senderID, body } = event;
-  const emojis = Object.keys(emojiResponses);
+  if (!body) return;
 
-  // Convert the message body to lowercase
+  const emojis = Object.keys(emojiResponses);
   const lowercaseBody = body.toLowerCase();
 
   for (const emoji of emojis) {
     if (lowercaseBody.includes(emoji)) {
-      // Fetch user's gender correctly
-      const ThreadInfo = await api.getThreadInfo(threadID);
-      const user = ThreadInfo.userInfo.find(user => user.id === senderID);
+      try {
+        const threadInfo = await api.getThreadInfo(threadID);
+        const user = threadInfo.userInfo.find(user => user.id === senderID);
 
-      // Check if the sender is the bot owner
-      const bot
-      let responseArray;
+        let responseArray;
 
-      if (senderID === botOwnerID) {
-        responseArray = emojiResponses[emoji]["OWNER"];
-      } else {
-        responseArray = emojiResponses[emoji][gender] || emojiResponses[emoji]["FEMALE"];
+        if (senderID === botOwnerID) {
+          responseArray = emojiResponses[emoji]["OWNER"];
+        } else if (user && user.gender === 2) {
+          responseArray = emojiResponses[emoji]["FEMALE"] || emojiResponses[emoji]["MALE"];
+        } else {
+          responseArray = emojiResponses[emoji]["MALE"] || emojiResponses[emoji]["FEMALE"];
+        }
+
+        const randomResponse = responseArray[Math.floor(Math.random() * responseArray.length)];
+
+        api.sendMessage(randomResponse, threadID, messageID);
+        break;
+      } catch (error) {
+        console.error("Error fetching thread info:", error);
       }
-
-      // Randomly select a response from the appropriate array
-      const randomResponse = responseArray[Math.floor(Math.random() * responseArray.length)];
-
-      const msg = {
-        body: randomResponse,
-      };
-      api.sendMessage(msg, threadID, messageID);
-      break; // Exit the loop once a match is found
     }
   }
 };
