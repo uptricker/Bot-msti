@@ -8,55 +8,18 @@ module.exports.config = {
   credits: "SHANKAR SIR",
   description: "AI बॉट जो हर यूजर की बातचीत को याद रखकर जवाब देगा",
   commandCategory: "AI",
+  usePrefix: false,
   usages: "[बॉट के मैसेज पर रिप्लाई करें]",
   cooldowns: 5,
 };
 
 let userMemory = {};
 let isActive = true;
-let userLanguage = {};
-
-// समर्थित भाषाएँ
-const supportedLanguages = {
-  bhojpuri: "bho", urdu: "ur", punjabi: "pa", nepali: "ne",
-  english: "en", hindi: "hi", french: "fr", spanish: "es",
-  russian: "ru", italian: "it", arabic: "ar", german: "de",
-  portuguese: "pt", korean: "ko", bengali: "bn", marathi: "mr",
-  maithili: "mai", tamil: "ta", gujrati: "gu", sanskrit: "sa"
-};
-
-// **ट्रांसलेशन फ़ंक्शन**
-const translateText = async (text, targetLang) => {
-  return new Promise((resolve, reject) => {
-    request(
-      encodeURI(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${text}`),
-      (err, res, body) => {
-        if (err) return reject("Translation failed.");
-        try {
-          const translated = JSON.parse(body);
-          let translatedText = "";
-          translated[0].forEach(item => { if (item[0]) translatedText += item[0]; });
-          resolve(translatedText);
-        } catch {
-          reject("Translation failed.");
-        }
-      }
-    );
-  });
-};
 
 // **बॉट का मुख्य इवेंट**
 module.exports.handleEvent = async function ({ api, event }) {
   const { threadID, messageID, senderID, body, messageReply } = event;
   if (!isActive || !body) return;
-
-  const lowerBody = body.toLowerCase();
-
-  // **भाषा सेटिंग**
-  if (supportedLanguages[lowerBody]) {
-    userLanguage[senderID] = supportedLanguages[lowerBody];
-    return api.sendMessage(`✅ आपकी भाषा अब *${lowerBody}* सेट कर दी गई है।`, threadID);
-  }
 
   // **अगर यूजर ने बॉट के मैसेज पर रिप्लाई नहीं किया, तो कुछ मत करो**
   if (!messageReply || messageReply.senderID !== api.getCurrentUserID()) return;
@@ -76,8 +39,6 @@ module.exports.handleEvent = async function ({ api, event }) {
   try {
     const response = await axios.get(apiURL);
     let botReply = response.data.response || "मुझे समझने में दिक्कत हो रही है। क्या आप इसे दोहरा सकते हैं?";
-
-    botReply = await translateText(botReply, userLanguage[senderID] || "hi");
 
     // **यूजर की हिस्ट्री स्टोर करें (अब 15 मैसेज तक)**
     userMemory[senderID].push(`User: ${userQuery}`);
