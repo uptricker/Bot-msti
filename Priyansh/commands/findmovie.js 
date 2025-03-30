@@ -1,0 +1,72 @@
+const axios = require("axios");
+const fs = require("fs");
+const path = require("path");
+
+module.exports.config = {
+    name: "findmovie",
+    version: "1.0.6",
+    hasPermission: 0,
+    credits: "uzairrajput",
+    description: "Find movie or series details from IMDb",
+    commandCategory: "search",
+    usages: "[movie/series name]",
+    cooldowns: 3
+};
+
+module.exports.run = async ({ event, args, api }) => {
+    if (!args.length) {
+        return api.sendMessage("❗Baraye karam film ya series ka name darj karo!", event.threadID, event.messageID);
+    }
+
+    const query = args.join(" ");
+    const apiKey = "f02457d8"; // apna IMDb API Key Deal 
+    const url = `http://www.omdbapi.com/?t=${encodeURIComponent(query)}&apikey=${apiKey}`;
+
+    try {
+        const response = await axios.get(url);
+        const data = response.data;
+
+        if (data.Response === "False") {
+            return api.sendMessage(`❌ IMDb kar *${query}* Iske mutalek koi malumat nahi `, event.threadID, event.messageID);
+        }
+
+        // 🎬 pehle Movie Info Bejen
+        const message = `🎬 *${data.Title}* (${data.Year})\n⭐ IMDB Daja bandi: ${data.imdbRating}/10\n🎭 Genre: ${data.Genre}\n🎬 Director: ${data.Director}\n📜 Khahani: ${data.Plot}\n🌍 Malik: ${data.Country}\n\n🔗 IMDb: https://www.imdb.com/title/${data.imdbID}/`;
+        api.sendMessage(message, event.threadID, event.messageID);
+
+        // 🎥 Aghr Poster Aghr ap mojod hai to download our bejon 
+        if (data.Poster && data.Poster !== "N/A") {
+            const cacheDir = path.join(__dirname, "cache");
+            if (!fs.existsSync(cacheDir)) fs.mkdirSync(cacheDir); // aghr cache Aghr apke pass folder nahi hai to is ko banaya 
+
+            const filePath = path.join(cacheDir, `${data.Title.replace(/[^a-zA-Z0-9]/g, "_")}.jpg`);
+
+            const writer = fs.createWriteStream(filePath);
+            const imageResponse = await axios({
+                url: data.Poster,
+                method: "GET",
+                responseType: "stream"
+            });
+
+            imageResponse.data.pipe(writer);
+
+            writer.on("finish", () => {
+                api.sendMessage({ body: "🎞 Movie Poster:", attachment: fs.createReadStream(filePath) }, event.threadID, () => {
+                    setTimeout(() => {
+                        fs.unlink(filePath, (err) => {
+                            if (err) console.error("❌ Poster delete failed:", err);
+                        });
+                    }, 5000); // 5 Dosra ke bad auto tafselat
+                });
+            });
+
+            writer.on("error", (err) => {
+                console.error(err);
+                api.sendMessage("⚠️ Poster Download Karna ka malsa hai !", event.threadID, event.messageID);
+            });
+        }
+    } catch (error) {
+        console.error(error);
+        return api.sendMessage("⚠️ IMDb API Se data lana main ek masla hai bad main: Koshish kar raha hu!", event.threadID, event.messageID);
+    }
+};
