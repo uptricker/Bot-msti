@@ -18,19 +18,19 @@ module.exports = {
     // Array of Imgur URLs
     handleEvent: async function({ api, event, client, Users, __GLOBAL }) {
         const gifs = [
-            "https://i.imgur.com/hKOVh8n.jpeg",
-            "https://i.imgur.com/O3ptBXe.jpeg",
-            "https://i.imgur.com/ChqXZ7m.jpeg",
-            "https://i.imgur.com/0aARWU3.jpeg",
-            "https://i.imgur.com/dxZNoUf.jpeg",
-            "https://i.imgur.com/Strqyj8.jpeg"
+            "https://i.imgur.com/rBlViD9.jpeg",
+            "https://i.imgur.com/HghDS5W.jpeg",
+            "https://i.imgur.com/SShebP9.jpeg",
+            "https://i.imgur.com/i1QMVd7.jpeg",
+            "https://i.imgur.com/C3KXDEk.jpeg",
+            "https://i.imgur.com/bBk4AMt.jpeg"
         ];
 
-        const message = "●💐 =======❤️💐❤️💐❤️❤️  =======💐     ☟  ========== ☟ ==========  ☟  ●============================●     𝐎𝐰𝐧𝐞𝐫 ➻────╔╬⓼★⓼╃───────➣🄼🅁 🄱🄾🅃 🄾🅆🄽🄴🅁 🅂🄷🄰🄰🄽𝄠━─━Ⓔ⧐╰✾✾®️╀✿✿╀─━ↈⓇ⧐";
+        const message = "●💐 =======❤️💐❤️💐❤️❤️  =======💐     ☟  ========== ☟ ==========  ☟  ●============================●     𝐒𝐇𝐀𝐀𝐍 𝐃𝐏 ➻────╔╬⓼★⓼╃───────➣𝐘𝐄 𝐋𝐎 𝐌𝐄𝐑𝐀 𝐁𝐎𝐒𝐒 𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍𝄠━─━Ⓔ⧐╰✾✾®️╀✿✿╀─━ↈⓇ⧐";
         const { threadID, messageID } = event;
         const lowerCaseMessage = event.body.toLowerCase();
 
-        if (lowerCaseMessage.startsWith("aryan")) {  
+        if (lowerCaseMessage.startsWith("Boss")) {  
             // Select a random image URL from the array
             const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
             const downloadPath = path.join(__dirname, 'Boss-Jpg-Images.jpg');
