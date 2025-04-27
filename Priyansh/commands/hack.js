@@ -2,7 +2,7 @@ module.exports.config = {
   name: "hack",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
+  credits: "SHAAN KHAN",
   description: "hack",
   commandCategory: "hack",
   usages: "@mention",
@@ -56,7 +56,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
 
   var background = [
 
-    "https://i.imgur.com/ttznADF.jpeg"
+    "https://i.imghippo.com/files/qEl8678STs.png"
 ];
   var rd = background[Math.floor(Math.random() * background.length)];
 
@@ -87,11 +87,11 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
 
 
           const lines = await this.wrapText(ctx, name, 1160);
-          ctx.fillText(lines.join('\n'), 125,330);//comment
+          ctx.fillText(lines.join('\n'), 200,497);//comment
           ctx.beginPath();
 
 
-  ctx.drawImage(baseAvt1, 53, 290, 70, 70);
+  ctx.drawImage(baseAvt1, 83, 437, 100, 101);
 
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
