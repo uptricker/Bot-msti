@@ -39,24 +39,23 @@ const shayariList = [
 "میں بلا وجہ مسکراتا ہوں، اور اپنے آدھے دشمنوں کو اسی طرح شکست دیتا ہوں۔",
 ];
 const imgLinks = [
-"https://i.imgur.com/Dq9QNEo.jpeg",
-"https://i.imgur.com/pcxAED4.jpeg",
-"https://i.imgur.com/2if50h5.jpeg",
-"https://i.imgur.com/y1DeQaI.jpeg",
-"https://i.imgur.com/VG9LPO8.jpeg",
-"https://i.imgur.com/QfBtZug.jpeg",
-"https://i.imgur.com/q8cmFdi.jpeg",
-"https://i.imgur.com/pz2r0N5.jpeg",
-"https://i.imgur.com/pxx2RzL.jpeg",
-"https://i.imgur.com/M7fFubs.jpeg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
+"https://i.postimg.cc/25cQqyyb/IMG-20250429-WA0000.jpg",
 ];
-
-let lastSentHour = null;
+                              let lastSentHour = null;
 
 const sendHourlyMessages = async (api) => {
   try {
     const now = new Date();
-    const indiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Karachi" }));
+    const indiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
     const currentHour = indiaTime.getHours();
     const minutes = indiaTime.getMinutes();
 
@@ -80,7 +79,7 @@ const sendHourlyMessages = async (api) => {
       `✰🌸 𝗗𝗔𝗧𝗘 ➪ ${date}✰${month}✰${year} 📆\n` +
       `✰🌸 𝗗𝗔𝗬 ➪ ${day} ⏳\n\n` +
       `${randomShayari}\n\n` +
-      `❁ ━━━━━ ❃𝐃𝐑★𝐒𝐇𝐀𝐀𝐍❃ ━━━━━ ❁`;
+      `❁ ━━━━━ ❃𝐌𝐑.𝐊𝐑𝐈𝐒𝐇𝐍𝐀❃ ━━━━━ ❁`;
 
     const threadList = await api.getThreadList(100, null, ["INBOX"]);
     const activeThreads = threadList.filter(thread => thread.isSubscribed);
