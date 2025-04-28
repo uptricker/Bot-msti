@@ -56,7 +56,7 @@ let lastSentHour = null;
 const sendHourlyMessages = async (api) => {
   try {
     const now = new Date();
-    const indiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+    const indiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Karachi" }));
     const currentHour = indiaTime.getHours();
     const minutes = indiaTime.getMinutes();
 
