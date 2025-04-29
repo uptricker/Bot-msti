@@ -39,7 +39,7 @@ module.exports = {
     const songName = mediaType === "video" ? args.slice(0, -1).join(" ") : args.join(" ");
 
     const processingMessage = await api.sendMessage(
-      `🔍 "${songName}" ✅Apki Request Jari Hai Please Wait ! `,
+      `✅ "${songName}" Apki Request Jari Hai please Wait`,
       event.threadID,
       null,
       event.messageID
@@ -91,7 +91,7 @@ module.exports = {
       deleteAfterTimeout(thumbnailPath, 5000);
 
       // 🖥 **API Call to YouTube Downloader**
-      const apiUrl = `https://uzair-mtx-music-api-key.onrender.com/download?url=${encodeURIComponent(videoUrl)}&type=${mediaType}`;
+      const apiUrl = `https://uzair-mtx-music-api-key-uyz3.onrender.com/download?url=${encodeURIComponent(videoUrl)}&type=${mediaType}`;
       const downloadResponse = await axios.get(apiUrl);
 
       if (!downloadResponse.data.file_url) {
@@ -126,7 +126,7 @@ module.exports = {
       await api.sendMessage(
         {
           attachment: fs.createReadStream(downloadPath),
-          body: `🎵 **𝐎𝐖𝐍𝐄𝐑 ${mediaType === "video" ? "Video 🎥" : "Song 🎧"} 𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍 !**\𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰💞! `,
+          body: `𝐎𝐖𝐍𝐄𝐑 ${mediaType === "video" ? "Video 🎥" : "𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍"} 𝐘𝐄 𝐋𝐎 𝐀𝐏𝐊𝐈 𝐌𝐔𝐒𝐈𝐂 !**\n𝐄𝐧𝐣𝐨𝐲 𝐊𝐚𝐫𝐨 𝐛𝐚𝐧𝐲 ! 😍`,
         },
         event.threadID,
         event.messageID
