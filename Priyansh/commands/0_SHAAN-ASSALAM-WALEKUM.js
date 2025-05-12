@@ -3,8 +3,8 @@ module.exports.config = {
         name: "BYE",
     version: "1.1.1",
         hasPermssion: 0,
-        credits: "ARYAN", 
-        description: "THIS BOT IS ARYAN",
+        credits: "SHAAN", 
+        description: "THIS BOT IS SHAAN",
         commandCategory: "no prefix",
     cooldowns: 5, 
 };
