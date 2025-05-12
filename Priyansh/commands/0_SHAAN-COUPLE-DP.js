@@ -2,9 +2,9 @@ module.exports.config = {
   name: "couple dp",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "ARYAN",
+  credits: "SHAAN",
   description: "Couple Dp photos",
-  commandCategory: "THIS BOT IS MADE BY ARYAN",
+  commandCategory: "THIS BOT IS MADE BY SHAAN",
   usages: "cpl dp",
   cooldowns: 2,
   dependencies: {
