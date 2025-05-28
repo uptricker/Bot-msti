@@ -3,7 +3,7 @@ const { join, resolve } = require("path");
 const { execSync } = require('child_process');
 const chalk = require('chalk');
 const logger = require("./utils/log.js");
-const login = require("fca-priyansh");
+const login = require("fca-mtx-uzair");
 const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
@@ -183,7 +183,7 @@ function onBot({ models: botModel }) {
     loginData['appState'] = appState;
     login(loginData, async(loginError, loginApiData) => {
         if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
-      
+
 loginApiData.setOptions(global.config.FCAOption)
         writeFileSync(appStateFile, JSON.stringify(loginApiData.getAppState(), null, '\x09'))
         global.config.version = '1.2.14'
