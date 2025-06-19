@@ -44,7 +44,7 @@ module.exports.run = async function ({ api, event, args }) {
   
   try {
     const query = args.join(" ");
-    const searching = await api.sendMessage(`🔍 | "${query}" YouTube पर खोजा जा रहा है...`, event.threadID);
+    const searching = await api.sendMessage(`🔍 | "${query}" YouTube Apki Request Jari Hai Please Wait...`, event.threadID);
 
     // 1. YouTube search (via scraping YT search results)
     const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
@@ -75,7 +75,8 @@ module.exports.run = async function ({ api, event, args }) {
 
     writer.on("finish", async () => {
       await api.sendMessage({
-        body: `🎶 | Here's your song: "${title}"`,
+        body: `🎶 |  »»𝑶𝑾𝑵𝑬𝑹««★™  »»𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵««
+          🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰💞: "${title}"`,
         attachment: fs.createReadStream(filePath)
       }, event.threadID);
       fs.unlinkSync(filePath);
