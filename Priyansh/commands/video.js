@@ -45,7 +45,7 @@ module.exports.run = async function({ api, event, args }) {
   if (!query) return api.sendMessage("❌ | कृपया किसी वीडियो का नाम लिखें।\nउदाहरण: video लाल दुपट्टा", event.threadID);
 
   try {
-    const searching = await api.sendMessage(`🔍 | "${query}" के लिए वीडियो खोजा जा रहा है...`, event.threadID);
+    const searching = await api.sendMessage(`🔍 | "${query}" Apki Request Jari Hai Please Wait...`, event.threadID);
     const searchResult = await yts(query);
     const video = searchResult.videos[0];
 
@@ -85,7 +85,8 @@ module.exports.run = async function({ api, event, args }) {
             readStream.pipe(uploadReq);
           } else {
             await api.sendMessage({
-              body: `🎬 | "${title}" डाउनलोड हो चुका है!`,
+              body: `🎬 | "${title}"  »»𝑶𝑾𝑵𝑬𝑹««★™  »»𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵««
+          🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰 𝐕𝐈𝐃𝐄𝐎💞`,
               attachment: fs.createReadStream(filePath)
             }, event.threadID, () => fs.unlinkSync(filePath));
           }
