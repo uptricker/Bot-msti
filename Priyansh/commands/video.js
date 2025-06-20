@@ -1,86 +1,105 @@
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
+const request = require("request");
 const yts = require("yt-search");
 
 module.exports.config = {
   name: "video",
+  version: "2.0.0",
   hasPermission: 0,
-  version: "1.1.0",
-  description: "Download YouTube videos (under 25MB) or provide a link",
-  credits: "SHANKAR",
+  credits: "SHANKAR + ChatGPT",
+  description: "Smart YouTube video downloader using trigger",
+  commandCategory: "media",
   usePrefix: false,
-  cooldowns: 10,
-  commandCategory: "Utility"
+  cooldowns: 5
 };
 
-module.exports.run = async function ({ api, event, args }) {
-  if (!args[0]) {
-    return api.sendMessage(`❌ | कृपया एक वीडियो का नाम दर्ज करें!`, event.threadID);
-  }
+const triggerWords = ["pika", "bot", "shankar"];
+const keywordMatchers = ["video", "bhejo", "bhej", "dikhao", "lagao"];
+
+module.exports.handleEvent = async function ({ api, event }) {
+  let message = event.body?.toLowerCase();
+  if (!message) return;
+
+  const foundTrigger = triggerWords.find(trigger => message.startsWith(trigger));
+  if (!foundTrigger) return;
+
+  let content = message.slice(foundTrigger.length).trim();
+  if (!content) return;
+
+  const words = content.split(/\s+/);
+  const keywordIndex = words.findIndex(word => keywordMatchers.includes(word));
+  if (keywordIndex === -1 || keywordIndex === words.length - 1) return;
+
+  let possibleWords = words.slice(keywordIndex + 1);
+  possibleWords = possibleWords.filter(word => !keywordMatchers.includes(word));
+  const query = possibleWords.join(" ").trim();
+  if (!query) return;
+
+  // Simulate run command
+  module.exports.run({ api, event, args: query.split(" ") });
+};
+
+module.exports.run = async function({ api, event, args }) {
+  const query = args.join(" ");
+  if (!query) return api.sendMessage("❌ | कृपया किसी वीडियो का नाम लिखें।\nउदाहरण: video लाल दुपट्टा", event.threadID);
 
   try {
-    const query = args.join(" ");
-    const findingMessage = await api.sendMessage(`🔍 | "${query}" खोजा जा रहा है...`, event.threadID);
+    const searching = await api.sendMessage(`🔍 | "${query}" के लिए वीडियो खोजा जा रहा है...`, event.threadID);
+    const searchResult = await yts(query);
+    const video = searchResult.videos[0];
 
-    const searchResults = await yts(query);
-    const firstResult = searchResults.videos[0];
-
-    if (!firstResult) {
-      await api.sendMessage(`❌ | "${query}" के लिए कोई परिणाम नहीं मिला।`, event.threadID);
-      return;
+    if (!video) {
+      return api.sendMessage("❌ | कोई भी वीडियो नहीं मिला।", event.threadID);
     }
 
-    const { title, url } = firstResult;
-    await api.editMessage(`⏳ | "${title}" का डाउनलोड लिंक प्राप्त किया जा रहा है...`, findingMessage.messageID);
+    const videoUrl = video.url;
+    const title = video.title.replace(/[^\w\s]/gi, '').substring(0, 50);
+    const fileName = `${Date.now()}-${title}.mp4`;
+    const filePath = path.join(__dirname, "cache", fileName);
 
-    const apiUrl = `https://prince-sir-all-in-one-api.vercel.app/api/download/ytmp4?url=${encodeURIComponent(url)}`;
-    const response = await axios.get(apiUrl);
-    const responseData = response.data;
+    const apiUrl = `https://shankar-all-apis.vercel.app/api/ytdl?url=${encodeURIComponent(videoUrl)}`;
 
-    if (!responseData.status || !responseData.download || !responseData.download.video) {
-      await api.sendMessage(`❌ | "${title}" के लिए कोई डाउनलोड लिंक नहीं मिला।`, event.threadID);
-      return;
-    }
-
-    const downloadUrl = responseData.download.video;
-    const filePath = path.resolve(__dirname, "cache", `${Date.now()}-${title}.mp4`);
-
-    const videoResponse = await axios.get(downloadUrl, {
-      responseType: "stream",
-      headers: { "User-Agent": "Mozilla/5.0" }
-    });
-
-    const fileStream = fs.createWriteStream(filePath);
-    videoResponse.data.pipe(fileStream);
-
-    fileStream.on("finish", async () => {
-      const stats = fs.statSync(filePath);
-      const fileSizeInMB = stats.size / (1024 * 1024);
-
-      if (fileSizeInMB > 25) {
-        await api.sendMessage(`❌ | "${title}" का साइज ${fileSizeInMB.toFixed(2)}MB है, जो 25MB से ज्यादा है।\n📥 डाउनलोड लिंक: ${downloadUrl}`, event.threadID);
-        fs.unlinkSync(filePath);
-        return;
+    request({ url: apiUrl, json: true }, (err, res, body) => {
+      if (err || !body.status || !body.result || !body.result.download_url) {
+        return api.sendMessage("❌ | वीडियो डाउनलोड लिंक प्राप्त करने में समस्या हुई।", event.threadID);
       }
 
-      await api.sendMessage({
-        body: `🎥 | APKI VIDEO DE RAHI HU "${title}" 𝑶𝑾𝑵𝑬𝑹 𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵`,
-        attachment: fs.createReadStream(filePath)
-      }, event.threadID);
+      const downloadUrl = body.result.download_url;
 
-      fs.unlinkSync(filePath);
-      api.unsendMessage(findingMessage.messageID);
+      request(downloadUrl)
+        .pipe(fs.createWriteStream(filePath))
+        .on("finish", async () => {
+          const stats = fs.statSync(filePath);
+          const fileSizeMB = stats.size / (1024 * 1024);
+
+          if (fileSizeMB > 25) {
+            const readStream = fs.createReadStream(filePath);
+            const uploadReq = request.post("https://transfer.sh/" + fileName, async (err, resp, body) => {
+              fs.unlinkSync(filePath);
+              if (err) {
+                return api.sendMessage(`❌ | वीडियो बहुत बड़ा है और अपलोड करने में समस्या हुई: ${err.message}`, event.threadID);
+              }
+              return api.sendMessage(`⚠️ | वीडियो साइज: ${fileSizeMB.toFixed(2)}MB\n💾 डाउनलोड लिंक:\n${body}`, event.threadID);
+            });
+            readStream.pipe(uploadReq);
+          } else {
+            await api.sendMessage({
+              body: `🎬 | "${title}" डाउनलोड हो चुका है!`,
+              attachment: fs.createReadStream(filePath)
+            }, event.threadID, () => fs.unlinkSync(filePath));
+          }
+
+          api.unsendMessage(searching.messageID);
+        })
+        .on("error", async error => {
+          fs.unlinkSync(filePath);
+          return api.sendMessage(`❌ | वीडियो डाउनलोड में समस्या: ${error.message}`, event.threadID);
+        });
     });
 
-    videoResponse.data.on("error", async (error) => {
-      console.error(error);
-      await api.sendMessage(`❌ | वीडियो डाउनलोड करने में समस्या हुई: ${error.message}`, event.threadID);
-      fs.unlinkSync(filePath);
-    });
-
-  } catch (error) {
-    console.error(error.response ? error.response.data : error.message);
-    await api.sendMessage(`❌ | वीडियो प्राप्त करने में समस्या हुई: ${error.response ? error.response.data : error.message}`, event.threadID);
+  } catch (e) {
+    console.error(e);
+    api.sendMessage("❌ | कोई अनपेक्षित त्रुटि हुई।", event.threadID);
   }
 };
