@@ -86,7 +86,7 @@ module.exports.run = async function({ api, event, args }) {
           } else {
             await api.sendMessage({
               body: `🎬 | "${title}"  »»𝑶𝑾𝑵𝑬𝑹««★™  »»𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵««
-          🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰 𝑽𝑰𝑫𝑬𝑶💞`,
+          🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰 𝑽𝑰𝑫𝑬𝑶👈`,
               attachment: fs.createReadStream(filePath)
             }, event.threadID, () => fs.unlinkSync(filePath));
           }
