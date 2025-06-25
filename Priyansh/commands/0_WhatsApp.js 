@@ -2,7 +2,7 @@ module.exports.config = {
   name: "whatsapp",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Shaan",
+  credits: "Amir",
   description: "Whatsapp Love :>",
   commandCategory: "fun",
   usages: "",
@@ -98,7 +98,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
   fs.removeSync(pathAvt2);
-  return api.sendMessage({ body: `╔══❖••° °••❖══╗\n    𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥\n╚══❖••° °••❖══╝\n\n✶⊶⊷⊷𝐎𝐖𝐍𝐄𝐑 𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍⊶⊷⊷✶\n         👑 تجھے کتنا ❤️\n   ${name2} \n       🌸چاہنے لگے ہم 🩷\n✶⊶⊷⊷❍⊶⊷⊷✶`,
+  return api.sendMessage({ body: `╔══❖••° °••❖══╗\n    𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥\n╚══❖••° °••❖══╝\n\n✶⊶⊷⊷❍⊶⊷⊷✶\n         👑 تجھے کتنا ❤️\n   ${name2} \n       🌸چاہنے لگے ہم 🩷\n✶⊶⊷⊷❍⊶⊷⊷✶`,
             mentions: [{
           tag: `${name2}`,
           id: id2
