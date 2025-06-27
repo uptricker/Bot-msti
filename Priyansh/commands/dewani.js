@@ -22,7 +22,7 @@
   }
 
   module.exports.config = {
-    name: 'dewani',
+    name: 'deewani',
     version: '1.2.0',
     hasPermssion: 0,
     credits: 'uzairrajput',
