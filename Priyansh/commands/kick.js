@@ -17,7 +17,7 @@ module.exports.languages = {
 	},
 	"en": {
 		"error": "Error! An error occurred. Please try again later!",
-		"needPermssion": "Need group admin\nPlease add and try again!",
+		"needPermssion": "Are Shaan Yar Pehle group admin To Karo Bot Ko\nFir Kick Karo Na 😂😂!",
 		"missingTag": "You need tag some person to kick"
 	}
 }
