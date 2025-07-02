@@ -1,33 +1,27 @@
 const { spawn } = require("child_process");
-const axios = require("axios");
+const path = require("path");
 const logger = require("./utils/log");
-const express = require('express');
-const path = require('path');
-const fs = require("fs");
 
 ///////////////////////////////////////////////////////////
-//========= Create website for dashboard/uptime =========//
+//========= Skip Express (Uptime) on Render =============//
 ///////////////////////////////////////////////////////////
 
-const app = express();
-const port = process.env.PORT || 8080;
+if (!process.env.RUNNING_ON_RENDER) {
+    const express = require('express');
+    const app = express();
+    const port = process.env.PORT || 8080;
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '/𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿.html'));
-});
+    app.get('/', function (req, res) {
+        res.sendFile(path.join(__dirname, '/𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿.html'));
+    });
 
-app.listen(port, () => {
-    logger(`Server is running on port ${port}...`, "[ Starting ]");
-}).on('error', (err) => {
-    if (err.code === 'EACCES') {
-        logger(`Permission denied. Cannot bind to port ${port}.`, "[ Error ]");
-    } else {
-        logger(`Server error: ${err.message}`, "[ Error ]");
-    }
-});
+    app.listen(port, () => {
+        logger(`Local server is running on port ${port}...`, "[ Local Uptime ]");
+    });
+}
 
 /////////////////////////////////////////////////////////
-//========= Create start bot and make it loop =========//
+//========= Start the bot and make it loop ============//
 /////////////////////////////////////////////////////////
 
 global.countRestart = global.countRestart || 0;
