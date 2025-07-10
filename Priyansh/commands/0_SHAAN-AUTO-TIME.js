@@ -2,7 +2,7 @@ module.exports.config = {
     name: "AUTO-TIME",
     version: "1.2.0",
     hasPermssion: 0,
-    credits: "Priyanshi Kaur",
+    credits: "Sushil Yadav",
     description: "Automatically Send Messages Based On Indian Time With Attechment",
     commandCategory: "Utilities",
     usages: "Automatic",
