@@ -4,7 +4,7 @@ module.exports.config = {
   name: "joke",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "ARYAN",
+  credits: "SUSHIL",
   description: "Ek mazedaar joke bhejta hai",
   commandCategory: "Fun",
   usages: "joke",
