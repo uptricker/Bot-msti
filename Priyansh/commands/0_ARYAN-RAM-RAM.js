@@ -3,8 +3,8 @@ module.exports.config = {
 	name: "Ram",
     version: "1.1.1",
 	hasPermssion: 0,
-	credits: "ARYAN",
-	description: "THIS BOT IS MR AADI SHARMA",
+	credits: "SUSHIL",
+	description: "THIS BOT IS MR SUSHIL SUSHIL",
 	commandCategory: "no prefix",
     cooldowns: 5, 
 };
