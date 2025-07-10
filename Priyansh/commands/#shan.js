@@ -13,11 +13,11 @@ module.exports.handleEvent = async ({ api, event, Users, Currencies, args, utils
   var name = await Users.getNameUser(event.senderID);
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
-  if(react.includes("shan khan") ||
-     react.includes("Shaan Khan") || react.includes("SHAAN") || react.includes("shaan") ||
-react.includes("shan") ||
-react.includes("SHAAN KHAN") ||     
-react.includes("Shaan")) {
+  if(react.includes("sushil yadav") ||
+     react.includes("Sushil yadav") || react.includes("SUSHIL") || react.includes("sushil") ||
+react.includes("sushiil") ||
+react.includes("SUSHIL KUMAR") ||     
+react.includes("Sushil")) {
     var msg = {
         body: `${name} 𝑻𝑼𝑴 𝑵𝑬 𝑩𝑯𝑼𝑳𝑨𝒀𝑨 𝑶𝑼𝑹 𝑯𝑼𝑴 𝑪𝑯𝑨𝑳𝑬 𝑨𝑨𝒀𝑬💞✿`,attachment: fs.createReadStream(__dirname + `/noprefix//received_1236460420763390.jpeg`)
       }
