@@ -2,8 +2,8 @@ module.exports.config = {
     name: "fram",
     version: "7.3.1",
     hasPermssion: 0,
-    credits: "SHAAN", 
-    description: "THIS BOT WAS MADE BY MR SHAAN",
+    credits: "SUSHIL", 
+    description: "THIS BOT WAS MADE BY MR SUSHIL",
     commandCategory: "PROFILE DP FRAME",
     usages: "PREFIX MENTIONS",
     cooldowns: 5,
@@ -69,6 +69,6 @@ module.exports.run = async function ({ event, api, args }) {
     if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
     else {
         const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "☟  ========== ☟ ==========  ☟                                                         ●===========================●                              𝐎𝐰𝐧𝐞𝐫 ➻  ────  𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍 𝐊", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "☟  ========== ☟ ==========  ☟                                                         ●===========================●                              𝐎𝐰𝐧𝐞𝐫 ➻  ────  𝐒𝐔𝐒𝐇𝐈𝐋 𝐘𝐀𝐃𝐀𝐕", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
                                       }
