@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "SUSHIL",
   description: "THIS BOT IS MADE BY SUSHIL",
-  commandCategory: "ARYAN-STATUS",
+  commandCategory: "SUSHIL-STATUS",
   usages: "SAYERI",
   cooldowns: 2,
   dependencies: {
