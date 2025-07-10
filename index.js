@@ -35,7 +35,7 @@ app.listen(port, () => {
 function startBot(message) {
     if (message) logger(message, "[ Starting ]");
 
-    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "Priyansh.js"], {
+    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "Amir.js"], {
         cwd: __dirname,
         stdio: "inherit",
         shell: true
