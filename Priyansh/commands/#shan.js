@@ -1,9 +1,9 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "SHAAN",
+  name: "SUSHIL",
     version: "2.1.1",
   hasPermssion: 0,
-  credits: "𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍", 
+  credits: "𝐒𝐔𝐒𝐇𝐈𝐋 𝐘𝐀𝐃𝐀𝐕", 
   description: "Just Respond",
   commandCategory: "no prefix",
     cooldowns: 5, 
