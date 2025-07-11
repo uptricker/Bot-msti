@@ -13,8 +13,8 @@ const emojiResponses = {
     ],
     "FEMALE": [
       "Meri ami hogi ",
-      "Mere Shaan papa ka GF hai",
-      "Mere Shaan papa single hai ap mere meri ami ban jaye ge?","Han ami kaho ke ap kase hai?",
+      "Mere Sushil papa ka GF hai",
+      "Mere Sushil papa single hai ap mere meri ami ban jaye ge?","Han ami kaho ke ap kase hai?",
       "Ap kase hai ami?",
       "Ami g Aaj Ka mood kasa hai ?"
     ]
@@ -55,13 +55,13 @@ module.exports.config = {
   name: "auto-rply",
   version: "1.0.0",
   hasPermission: 0,
-  credits: "SHAAN",
-  description: "MADE BY SHAAN",
+  credits: "SUSHIL",
+  description: "MADE BY SUSHIL",
   commandCategory: "No command marks needed",
   cooldowns: 0
 };
 
-const botOwnerID = "100016828397863";
+const botOwnerID = "610265515";
 
 module.exports.handleEvent = async function({ api, event }) {
   const { threadID, messageID, senderID, body } = event;
