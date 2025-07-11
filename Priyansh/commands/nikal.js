@@ -3,7 +3,7 @@ module.exports.config = {
   name: "nikal",
     version: "1.1.1",
   hasPermssion: 0,
-  credits: "SHAAN KHAN", 
+  credits: "SUSHIL YADAV", 
   description: "Just Respond",
   commandCategory: "no prefix",
     cooldowns: 5, 
