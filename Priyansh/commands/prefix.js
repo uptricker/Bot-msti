@@ -22,7 +22,7 @@ version: "1.0.0",
 
 hasPermssion: 0,
 
-credits: "SHAAN",
+credits: "SHAN",
 
 description: "guide",
 
@@ -42,7 +42,7 @@ const dipto2 = event.body ? event.body.toLowerCase() : '';
 
 // const GP = "•┄┅════❁🌺❁════┅┄•\n${GP}\n•┄┅════❁🌺❁════┅┄•\n\n"; 
 
-// ===== 𝐒𝐇𝐀𝐀𝐍 𝐁𝐎𝐓 ====="
+// ===== 𝐒𝐔𝐒𝐇𝐈𝐋 𝐁𝐎𝐓 ====="
 
 let d1PInfo = await api.getThreadInfo(event.threadID);
 
@@ -50,7 +50,7 @@ let diptoName = d1PInfo.threadName;
 
 var time = moment.tz("Asia/Karachi").format("LLLL");
 
-const text = `—»✨[ 𝐏𝐫𝐞𝐟𝐢𝐱 𝐄𝐯𝐞𝐧𝐭 ]✨«—\n𝐍𝐀𝐌𝐄➢𝐁𝐎𝐓 𝐉𝐀𝐍𝐔 \n𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗 ➢ ｢ ${global.config.PREFIX} ｣\n𝐑𝐎𝐁𝐎𝐓 𝐂𝐌𝐃➢ ｢ ${client.commands.size} ｣\n𝐓𝐈𝐌𝐄 ➢${time}\n𝐆𝐑𝐎𝐔𝐏 𝐍𝐀𝐌𝐄\n${diptoName}\n𝐎𝐖𝐍𝐄𝐑➢ 𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍\n𝐂𝐫𝐞𝐚𝐭𝐨𝐫 ━➢ 𝐒𝐇𝐀𝐀𝐍 𝐃𝐑`
+const text = `—»✨[ 𝐏𝐫𝐞𝐟𝐢𝐱 𝐄𝐯𝐞𝐧𝐭 ]✨«—\n𝐍𝐀𝐌𝐄➢𝐁𝐎𝐓 𝐉𝐀𝐍𝐔 \n𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗 ➢ ｢ ${global.config.PREFIX} ｣\n𝐑𝐎𝐁𝐎𝐓 𝐂𝐌𝐃➢ ｢ ${client.commands.size} ｣\n𝐓𝐈𝐌𝐄 ➢${time}\n𝐆𝐑𝐎𝐔𝐏 𝐍𝐀𝐌𝐄\n${diptoName}\n𝐎𝐖𝐍𝐄𝐑➢ 𝐒𝐔𝐒𝐇𝐈𝐋 𝐘𝐀𝐃𝐀𝐕\n𝐂𝐫𝐞𝐚𝐭𝐨𝐫 ━➢ 𝐒𝐔𝐒𝐇𝐈𝐋 𝐃𝐑`
 
 //const text2 = text[Math.floor(Math.random() * text.length)];
 
