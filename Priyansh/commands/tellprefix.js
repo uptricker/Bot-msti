@@ -3,7 +3,7 @@ module.exports.config = {
 	name: "Prefix-Batana",
     version: "1.0.1",
 	hasPermssion: 2,
-	credits: "Fixed By Shan", 
+	credits: "Fixed By Sushil", 
 	description: "hihihihi",
 	commandCategory: "no prefix",
 	usages: "🙂",
