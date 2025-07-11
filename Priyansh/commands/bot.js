@@ -21,7 +21,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
                   , "Aagye Salle Kabab Me Haddi 😏" , "Moye moye" , "Ittuu🤏 si shram ker Lya kro hr wqt tr tr krty ho 🙂 💔✨⚠️†", "Banda hota tw us ko choti choti 2 pOniyAn krti🙂👩‍🦯👩‍🦯", "Ary Yahin Hon namony😗", "jiee bndr 😍", "Love you bolongi ab tujhy kaminy", "Miss YoU NaW moi biryani ki plate", "Inna Sarra🤏", "OkkaY Shaan ki hun yawr mai", "😁Smile I am Taking Selfy✌️🤳", "🥺Jan nahi kehna to men naraz ho jana he", "bak bk bkaik", "Main ap ki ami ko btaou ₲ł ap Facebook use kerty ho aur ulty kam kalty ho , " ,"Block Your ‘’ gf ‘’ And Purpose me 🙂💔" ,"K0i Perp0Se Hi Krd0 Perm0te T0 hm PhlY hi HaiN 🙂" , "Koi apni janu ka number de mujhe😂😂" , "Allah ke name koi ladki apna number de mujhe😂😂😂😹" , "Mujhe Nahi pata hai mujhse mat pucho🙄🙄😀" , "jazz cash se 150 ka kharza mangwa kar sim band kar diya😂😂😂" , "tujhe kahi to dekha hai🤔🤔🙄" , "Mene zindagi✅ ko bahot kareb se dekha hai zindagi me do nokty hote hai😂😂😂" , "mera boss Shaan roz bol tha hai ke ek din  meri bhi gf hogi😂😂" , "Tujhe Ek Bat Baton Wo Bolti Thi Ke Bacho Ka Name Main Rakongi😂😂😪😪" , "HUM WOHAN KAREY HOTE HAI JAHAN BETH NE KI JAGHA NAHI HOTI😂😂😂" , "TUJHE YAD NA MERI AAI TUJI AB KYA KHE NA😂😂😂" , "𝐓𝐔𝐦 𝐭𝐨 𝐒𝐡𝐀𝐊𝐚𝐥 𝐒𝐞 𝐆𝐚𝐑𝐞𝐛 𝐋𝐚𝐠 𝐓𝐡𝐞 𝐇𝐨" , "𝐆𝐅 𝐁𝐅 𝐤𝐚 𝐂𝐡𝐚𝐤𝐚𝐫 𝐂𝐡𝐎𝐫𝐨 𝐏𝐚𝐫𝐝𝐡𝐢 𝐏𝐞 𝐃𝐞𝐲𝐚𝐧 𝐃𝐨😂😂" , "𝐃𝐡𝐔𝐤 𝐈𝐬 𝐁𝐚𝐓 𝐊𝐚 𝐧𝐇𝐢 𝐤𝐄 𝐒𝐢𝐧𝐠𝐥𝐞 𝐇𝐨𝐧 𝐃𝐡𝐮𝐊 𝐢𝐒 𝐁𝐚𝐭 𝐊𝐚 𝐇𝐚𝐢 𝐤𝐞 𝐊𝐨𝐈 𝐌𝐚𝐧𝐭𝐚 𝐍𝐡𝐢 𝐊𝐞 𝐒𝐢𝐍𝐠𝐋𝐞 𝐇𝐨𝐨𝐧😹😹👈" , "𝐓𝐮𝐦 𝐌𝐚𝐍𝐨 𝐘𝐞 𝐍𝐚 𝐌𝐚𝐍𝐨 𝐒𝐮𝐧𝐝𝐚𝐫 𝐓𝐨 𝐌𝐚𝐢𝐧 𝐇𝐨𝐨𝐧😄😄🙄" , "Bs Kar U ko Pyar Ho Na Ho Mujhe Ho Jayga Na" , "FarMao 😒" , "BulaTi Hai MaGar Jaane Ka Nhi 😜" , "Main To Andha Hun 😎" , "Phle NaHa kar Aa 😂" , "Aaaa Thooo 😂😂😂" , "Main yahin hoon kya hua sweetheart ," , "chomu Tujhe Aur Koi Kaam Nhi H? Har Waqt Bot Bot Karta H" , "Chup Reh, Nhi Toh Bahar Ake tera Dath Tor Dunga" , "WaYa KaRana Mere NaL 🙊" , "MaiNy Uh Sy Bt Nhi kRrni" , "MeKo Kxh DiKhai Nhi Dy Rha 🌚" , "Bot Na BoL 😢 JaNu B0ol 😘 " , "Bar Bar Disturb Na KRr JaNu Ke SaTh Busy Hun  😋" , "Main Gareebon Sy Bt Nhi kRta 😉😝😋🤪" , "Itna Na Pass aa Pyar h0o JayGa" , "MeKo Tang Na kRo Main Kiss 💋 KRr DunGa 😘 " , "Ary yrr Mazak Ke M0oD Me Nhi Hun 😒" , "HaYe JaNu Aow Idher 1 PaPpi Idher d0o 1 PaPpi Idher 😘" , "Dur HaT Terek0o 0or K0oi Kam Nhi Jb DeKho Bot Bot ShaDi KerLe Mujhsy 😉😋🤣" , "TeRi K0oi Ghr Me Nhi SunTa T0o Main Q SuNo 🤔😂 " , "IB Aja Yahan Nhi B0ol Sakta 🙈😋" , "Mujhe Mat BuLao Naw Main buSy h0o Naw" , "Kyun JaNu MaNu Another Hai 🤣" , "Are TuMari T0o Sb he baZzati kRrty Me Be kRrDun 🤏😜" , "𝖠𝗐𝗈 𝖪𝖺𝖻𝗁𝗂 HaVeLi Prr  😈" , "Bx KRr Uh k0o Pyar H0o Na H0o Mujhe H0o JayGa" , "𝖬𝖺𝗂𝗇 𝖭𝖺𝗁𝗂 𝖯𝖺𝗍𝗍𝗈𝗇𝗀𝗂 😂😂👈 " , "Main Nahi To Kon Bey 😜" , "Main T0o AnDha Hun 😎" , "Phle NaHa kRr Aa 😂" , "Papi ChuLo 🌚" , "TeRek0o DiKh Nhi Rha Main buSy Hun 😒" , "TeRa T0o GaMe BaJana PreGa" , "Ta Huwa 🥺"  , "TuM Phr AaGye 🙄 Kisi 0or Ny Muu Nhi LaGaYa Kya🤣🤣🤣" , "MeKo JaNu Chai Hai Tum Single H0o?" , "Aaaa Thooo 😂😂😂" , "Main S0o Rha Hun " , "Ase He HansTy Rha kRo 😍" , "•••••••••••••••••••••••••••••🦢𒀱卄ɅƔƏ MɅ🅘ɳ ʍɅᏒ••••🌿💞 JɅωɅ ┼ƏᏒ🅘 ʍɅ🅢𝖚ʍ 🅢ɅҠɅɭ 𝐩Ə ɮɅɮƔ 💋 " , "Bot Na Bol Oye Janu bol Mujhe " , "Bar Bar Disturb Na Karen Shaan JaNu Ke SaTh Busy Hun 🤭🐒" , "Main flirty logo Sy Bt Nhi karti 😉😝😋🤪" , "Itna Pass mat aa Pyaar h0 JayGa" , "Bolo Babu Tum Mojy Pyar Karte Ho Na 🙈💋💋 " , "barye meherbani apka mho relationship ke lie na kafi hai😂😂😹" , "ufone ke lie sab kuch tum hi to😂😂" , "Are jaan Majaak ke mood me nahi hun main jo kaam hai bol do sharmao nahi" , "han ji bolo kya seva karne aapki 😶🤍" , "Tu Bandh nhi Karega kya?" , "kya Sunna Hai apko mere se flirty kahike🤐🤣 " , "Haa ji boliye kya kam he hamse 🙈" , "Aree band kar band Kar" , "Mein hath jod ke Modi Ji Se Gujarish Karta hu mojy na bolaye" , "Tujhe Kya koi aur Kam nhi ha? Pura din sota he Aur Messenger pe Bot Bot Karta h" , " mera owner Ake tera bf/gf Ko Chura le Jayega" , "Zehar piyo zindagi jio" , "Tujhe Apna Bezati Karne Ka Saukh hai?🥹" , "Abhi Bola Toh Bola Dubara Mat Bolna🙄" , "Kisi din Banungi me raja ki rani😑" , "Bol De koi nahi dakh rha 🙄" , "Haaye Main Mar Jawa Babu Ek Chuma To Do Kafi Din Se Chumi Nahi Di 😝" , "Dur Hat Be  Mujhe Aur Koi Kam Nahi Kya Har Waqat Mujhy Tang Kerte Rhte ho 😂" , "Are Bolo Meri Jaan Kya Hall Hai😚 " , "IB Aja Yahan Nhi B0ol Sakti 🙈😋" , "Mujhe Mat BuLao Na Main buSy h0 Now" , "Bot Bolke Bejjti Kar Rahe ho yall...Main To Tumhare Dil Ki Dhadkan Hu Baby...💔🥺" , "Are Tum Wahi ho nah Jisko Main Nahi Janti 🤪" , "Kal Haveli Pe Mil Jra Tu 😈" , "Aagye SaJJy KhaBBy Sy 😏" , "Bx KRr Uh k0o Pyar H0o Na H0o Mujhe H0o JayGa" , "sono fikar na karo kuch thk nhi hoga😂😂" , "bolo 😒" , "BulaTi Hai MaGar JaNy Ka Nhi 😜" , "Main T0o AnDha Hun 😎kya likha tumne mene nahi dikha🤣" ,  "Pahale NaHa kar Aa 😂" , "Aaaa Thooo 😂😂😂" , "Main yahi hoon kya hua sweetheart🥂🙈💞 ," , "AA Dk Tujhe Aur Koi Kaam Nhi Hai? Har Waqt Bot Bot Karta H" , "Chup Reh, Nahi Toh Bahar Ake tera Dath Tor Dunga🤣✊" , "yes my love 💘" , "kya hua baby ko 😘😘" , "mujhe sharam ati hai aise aap bolte hai tho 🤭😝" , "aree aap wahi ho na jo mujhe line marte the.......🤣 ya bali line" , "jii kahiye jii 🙄 kya chahiye" , "hayee main mar jye teri masoom shaqal py 😂 tuzy Chapple se kutne ka mn ho raha hai🤣👠" , "Bot nah bol oye 😭 Janu bol mjhy aur janu sy piyar sy bat kerty hai😑" , "ruk tu chappal kaha he mari🩴" , "shakal Sy masoom lgty ho 😂 but bohot flirty ho" , "kash tum single hote to maza hi koch aur tha pagal insaan 😂" , "Ha ha ab meri yaad ab ai nah phly to babu shona kerna gy thy 😾 ab ham ap sy naraz hai jao ap bye ☹️" , "haiy babu ne boldiya hai shaid purpose kerna hai mujhe bolo bolo babu 😘" , "Aree pagal roti banana ke le aty main Pani ko istamal kerte ho 😂" , "Ary joke nah mar jo bhi kam hai bol do sharma nahi , bol de koi nahi dakh rha 😂" , "Hayee Mar Jawa Babu Ak Chuma To Doo Kafi Din Sy Chumi Nahi Mili Kahan Thy Babu inbox Ah Jao 😚🙈♥️" , "Dur Dur karib na a  tujhe Aur Koi Kam Nahi Kiya Har Waqat Mjhy Tang Karte Rahte Ho 😂" , "ary ary bolo meri jaan kia haal hai ;) ;* " , "Tum aunty ho yehh uncle 🤔 I think tum Jin ho yehh Chudail🤣✅" , "ary tum ider 🤔 khair hai ider kia ker rhy ho 😂" , "ary babu babu kal hawali py kon bola rha tha 😂" , "Me Aap ki mummy ji ko btaou ga Aap Facebook use karty ho 😂" , "ary tum Wohi ho nah jis ko ma nahi janta 🤣✅" , "haveli per  kal mil  Zara bataunga 🌚😂Ha but buri harkat karne ke liye nahi" , "itne pyar se Na bulao pyar Ho jaega 😶💗 wtf Maine apni sacchai Bata Di yah Maine kyon Kiya 😭🔪....Fuuu..🚬" , "aap aise mat bulo hame sharam aati hai 🙈♥️" , "kyun Bulaya hamen..😾 " , "dewwana hua mastana hua fir So gaya" ,  "kyun Bulaya hamen..😾 " , "haiy ma sadky jawa teri masoom shaqal py 😂 chabal insan", "Bot nah bol oye ! Janu bol mjhy aur janu sy piyar sy bat kerty hai , rat ko kahan thy nazar nahi ay hawali py 😂", "Shaqal Sy masoom lgty ho 😂 btao kahi Ap ka ghar doup main to nahi", "kash tum single hoty to maza hi koch aur tha pagal insane 😂", "Ha ha ab meri yaad ab ai nah phly to babu shona kerna gy thy 😾 ab ham ap sy naraz hai jao ap bye ☹️", "haiy babu ny boliya hai shaid purpose kerna hai mjhy bolo bolo babu 😘", "Ary ghreeb awam roti banana ky liya athy main Pani ko istamal kerty ho 😂", "Ary chabli nah mar joh kam hai bol do sharma nahi , bol de koi nahi dakh rha 😂", "Hy Ma Mar Jawa Babu Ak Chuma To Doo Kafi Din Sy Chumi Nahi Mili Kahan Thy Babu inbox Ah Ja 😂", "Dur Dur Fity Muh Aur Koi Kam Nahi Kiya Har Waqat Mjhy Tang Kerta Rhta Ha 😂" , "ary ary bolo meri jaan kia hail hai ;) ;* " , "Tum aunty ho yehh uncle 🤔 I think tum Jin ho yehh Chudail" , "ary tum ider 🤔 khair hai ider kia ker rhy ho 😂" , "ary babu babu kal hawali py kon bola rha tha 😂" , "ma ap ki ami ko btaou ga ap Facebook use kerty ho 😂" , "ary tum Wohi ho nah jis ko ma nahi janta 😂" , "kal hawali py mil zara bataou ga 😂" , "esy nah dakho piyar ho jay ga 😂" , "Teri pic dakhna sy phly shukhr hai ma anda hu 😂" , "esy hi hansty rhao kyu ky hnsa sy konsa tera bill ah jata hai 😂"];
   var rand = tl[Math.floor(Math.random() * tl.length)]
 
-   if ((event.body.toLowerCase() == "kamina") || (event.body.toLowerCase() == "sala")) {
+   if ((event.body.toLowerCase() == "kamina bot") || (event.body.toLowerCase() == "kutty bot")) {
        return api.sendMessage("Gali na de Sushil ko bata dungi🙄🙄🙏", threadID);
      };
    if ((event.body.toLowerCase() == "hug me") || (event.body.toLowerCase() == "hug")) {
@@ -74,7 +74,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
       if ((event.body.toLowerCase() == "🤗") || (event.body.toLowerCase() == "🤗")) {
        return api.sendMessage("yahan nahi Ib chalo ☺️", threadID);
      };
-    if ((event.body.toLowerCase() == "shaan") || (event.body.toLowerCase() == "shan")) {
+    if ((event.body.toLowerCase() == "@sushil kumar yadav") || (event.body.toLowerCase() == "sushil")) {
        return api.sendMessage("Boss busy hai Mujse bat Karo 🙄", threadID);
      };
     if ((event.body.toLowerCase() == "janu") || (event.body.toLowerCase() == "jan")) {
@@ -119,15 +119,15 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      };
      if ((event.body.toLowerCase() == "ib aa")) {return api.sendMessage("jo bol na Hai sab ke samne Bol tharki 🙄🙄 ", threadID);
      };
-     if ((event.body.toLowerCase() == "inbox aa")) {return api.sendMessage("kab Sai Hoga ye system Har koi inbox 📥 Jana chata 😀🙄🙄 ", threadID);
+     if ((event.body.toLowerCase() == "inbox aa")) {return api.sendMessage("kab Sai Hoga ye system Har koi inbox 📥 Jana chahta 😀🙄🙄 ", threadID);
      };
       if ((event.body.toLowerCase() == "ladki ho")) {return api.sendMessage("Nahi ye bot Hai tharki insan 😂😀🙄 ", threadID);
      };
-              if ((event.body.toLowerCase() == "wow")) {return api.sendMessage("Thank you Apko bhi bot chahiya tOo Sushil se Contact karo👍👍💕" , threadID);
+              if ((event.body.toLowerCase() == "bot bana do")) {return api.sendMessage("Thank you Apko bhi bot chahiya tOo Sushil se Contact karo👍👍💕" , threadID);
      };
          if ((event.body.toLowerCase() == "👻")) {return api.sendMessage("𝒀𝑬 𝑫𝑬𝑲𝑯 𝑮𝑨𝑹𝑬𝑬𝑩𝑶 𝑲𝑨 𝑩U𝑻𝑯🤣🤣😅 ", threadID);
      };
-        if ((event.body.toLowerCase() == "😿")) {return api.sendMessage(" Biliya kab se rone lagi ajeb hai😂😂🤣", threadID);
+        if ((event.body.toLowerCase() == "😿")) {return api.sendMessage(" Billiya kab se rone lagi ajeb hai😂😂🤣", threadID);
      };
       if ((event.body.toLowerCase() == "Purvi")) {return api.sendMessage("bahot pyari Ladkı Hai Purvi MashaAllah  💕💕❤️🤭 ", threadID);
      };
@@ -135,7 +135,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
                };
       if ((event.body.toLowerCase() == "delete")) {return api.sendMessage("bheja kyu fir delete Karne bol rahe he ho🙄🙄", threadID);
      };
-       if ((event.body.toLowerCase() == "🤫")) {return api.sendMessage("kyu karu chup baap ka raj hai Kya 🤣🤣", threadID);
+       if ((event.body.toLowerCase() == "🤫")) {return api.sendMessage("kyu rahu chup baap ka raj hai Kya 🤣🤣", threadID);
      };
      if ((event.body.toLowerCase() == "🥱")) {return api.sendMessage("Nind ari hi Hai to so jawo na kis ka wait kar rahe ho 🙄🙄 ", threadID);
      };
@@ -145,12 +145,12 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
 
 
 
-     if ((event.body.toLowerCase() == "bc") || (event.body.toLowerCase() == "bc")) {
-       return api.sendMessage("Sharam karo asi bat na Karo 🙏 ", threadID);
+     if ((event.body.toLowerCase() == "bsdk") || (event.body.toLowerCase() == "bc")) {
+       return api.sendMessage("Sharam karo ayesi bat na Karo 🙏 ", threadID);
      };
-    if ((event.body.toLowerCase() == "kis kar")) {return api.sendMessage(" ️sab dekh rahe hai wrna bhot kiss deti🙈 ", threadID);
+    if ((event.body.toLowerCase() == "kiss me")) {return api.sendMessage(" ️sab dekh rahe hai wrna bhot kiss deti🙈 ", threadID);
      };
-     if ((event.body.toLowerCase() == "🤭")) {return api.sendMessage("Aaysa Kam na Karo Ji's me muh chupa na padey🙄🙄 ", threadID);
+     if ((event.body.toLowerCase() == "🤭")) {return api.sendMessage("Aaysa Kam na Karo Ji's me muh chupana padey🙄🙄 ", threadID);
      };
        if ((event.body.toLowerCase() == "🥹")) {return api.sendMessage("itne bhi masoom Nahi Ho jitna muh Bani Hai 🥹🥹🙄🙄 ", threadID);
         };
@@ -160,7 +160,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
 
 
      if ((event.body.toLowerCase() == "logos") || (event.body.toLowerCase() == "logo")) {
-       return api.sendMessage("Logos ! 🥀 GALAXY, CAKE, CRACK, GLITCH, CLOUD, DRAGON, FROZEN, BUSINESS, ANIMATE, LOGODIAMOND, LOGOCAPTAIN, LOGOFISH, LOGOCOLORBLUR, LOGOBLOODTEXT, LOGOWOOD, LOGOCUP          🥀for example -> +crack Shaan Khan", threadID);
+       return api.sendMessage("Logos ! 🥀 GALAXY, CAKE, CRACK, GLITCH, CLOUD, DRAGON, FROZEN, BUSINESS, ANIMATE, LOGODIAMOND, LOGOCAPTAIN, LOGOFISH, LOGOCOLORBLUR, LOGOBLOODTEXT, LOGOWOOD, LOGOCUP          🥀for example -> +crack Sushil Yadav", threadID);
      };
 
      if ((event.body.toLowerCase() == "good night") || (event.body.toLowerCase() == "gn")) {
@@ -195,19 +195,19 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
        return api.sendMessage("༻𝐎𝐖𝐍𝐄𝐑:- ☞ ༻☞[𝐎𝐖𝐍𝐄𝐑:☞➸⃝🐼⃝⃞⃟𝐒𝐮𝐬𝐡𝐢𝐥 𝐲𝐚𝐝𝐚𝐯 🎸  ☜ 𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 𝐒𝐮𝐬𝐡𝐢𝐥. ☜ ༺༒ ༒𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝༒:- https://www.facebook.com/sushiilbabu?mibextid=ZbWKwL☞    his insta id @sushil_babu0 ☜ ༺༒ ༒", threadID);
      };
 
-     if ((event.body.toLowerCase() == "tera Malik kon hai") || (event.body.toLowerCase() == "is bot ka malik kon hai")) {
+     if ((event.body.toLowerCase() == "kiska bot he") || (event.body.toLowerCase() == "is bot ka malik kon hai")) {
        return api.sendMessage("Sushil yadav 𝐔𝐫𝐟 Sushil   ❤️ My Creator. He loves me & Edit Me Daily. Ye Bot Sirf Owner k Liye h. Mujhe Aap logo ko Hasane k liye banya gya h Toh Muh Latkaye Mat Rakkha Karo. Har Waqt Haste Raho.", threadID);
      };
 
-    if ((event.body.toLowerCase() == "tera admin kon hai") || (event.body.toLowerCase() == "bot ka admin kon hai")) {
-       return api.sendMessage("My admin is 𝐒𝐮𝐬𝐡𝐢𝐥 𝐲𝐚𝐝𝐚𝐯. He Gives his name mr Shaan everywhare", threadID);
+    if ((event.body.toLowerCase() == "tera admin kon hai") || (event.body.toLowerCase() == "bot ka malik kon hai")) {
+       return api.sendMessage("My admin is 𝐒𝐮𝐬𝐡𝐢𝐥 𝐲𝐚𝐝𝐚𝐯. He Gives his name mr Sushil everywhare", threadID);
      };
 
      if ((event.body.toLowerCase() == "acha") || (event.body.toLowerCase() == "acha ji")) {
        return api.sendMessage("🤍Hanji meri jaan🙈✨", threadID);
      };
-     if ((event.body.toLowerCase() == "kiran") || (event.body.toLowerCase() == "anaya")) {
-       return api.sendMessage("Hy  kitni peyari hai Anaya 🙈✨", threadID);
+     if ((event.body.toLowerCase() == "nidhi") || (event.body.toLowerCase() == "rukmani")) {
+       return api.sendMessage("Hy  kitni peyari hai rukmani 🙈✨", threadID);
      };
 
 
@@ -220,26 +220,26 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      };
 
      if ((event.body.toLowerCase() == "chup") || (event.body.toLowerCase() == "stop") || (event.body.toLowerCase() == "chup ho ja") || (event.body.toLowerCase() == "chup kar")) {
-       return api.sendMessage("Nhi rahungi 😼 Mujhe Bolna H. Tumhe Koi Haq nhi Mujhe Chup Karane ka. Mera Zuban. M Bolungi Sushil ko baton kya🙄🙄", threadID);
+       return api.sendMessage("Nhi rahungi 😼 Mujhe Bolna H. Tumhe Koi Haq nhi Mujhe Chup Karane ka. Mera Zuban. M Bolungi Sushil ko bataun kya🙄🙄", threadID);
      };
     if ((event.body.toLowerCase() == "bts") || (event.body.toLowerCase() == "btc")) {
-       return api.sendMessage("Tu H Btc. Bhos DK", threadID);
+       return api.sendMessage("Tu H Bc. Bsdk", threadID);
      };
 
 
      if ((event.body.toLowerCase() == "kuttiya") || (event.body.toLowerCase() == "kutta")) {
-       return api.sendMessage("Same to you dor Fetty muh🤣🤣🤣👌", threadID);
+       return api.sendMessage("Same to you bakchod sale🤣🤣🤣👌", threadID);
      };
 
      if ((event.body.toLowerCase() == "malik se bakchodi") || (event.body.toLowerCase() == "malik se backchodi") || (event.body.toLowerCase() == "malkin se bakchodi") || (event.body.toLowerCase() == "malkin se backchodi")) {
-       return api.sendMessage("sorry malik maaf kr do ab nhi krugi Sushil please maaf karo na🥺🙏", threadID);
+       return api.sendMessage("sorry malik maaf kr do ab nhi krungi Sushil babu please maaf karo na🥺🙏", threadID);
      };
 
      if ((event.body.toLowerCase() == "gand") || (event.body.toLowerCase() == "gandu") || (event.body.toLowerCase() == "lund") || (event.body.toLowerCase() == "land")) {
        return api.sendMessage(" jyada khujli h toh banana 🍌 under le le. :))))", threadID);
      };
 
-     if ((event.body.toLowerCase() == "bot kiss me") || (event.body.toLowerCase() == "kiss me")) {
+     if ((event.body.toLowerCase() == "chumma do") || (event.body.toLowerCase() == "kiss me")) {
        return api.sendMessage("️Kis khushi me, Me sirf Apne Boss Sushil ko kiss karna chahti hu", threadID);
      };
 
@@ -256,10 +256,10 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      };
 
      if ((event.body.toLowerCase() == "hm") || (event.body.toLowerCase() == "hmm")) {
-       return api.sendMessage("️️️Hmm Hmm na kar yar mho main zuban hai wo use karo na😜🤪😂😂", threadID);
+       return api.sendMessage("️️️Hmm Hmm na kar yar muh main zuban hai wo use karo na😜🤪😂😂", threadID);
      };
 
-    if ((event.body.toLowerCase() == "ptoge") || (event.body.toLowerCase() == "patogi")) {     return api.sendMessage("️️️nikal tharki group se remove kar dougi", threadID);
+    if ((event.body.toLowerCase() == "ptoge") || (event.body.toLowerCase() == "patogi")) {     return api.sendMessage("️️️nikal tharki group se remove kar dungi", threadID);
      };
 
     if ((event.body.toLowerCase() == "i love you") || (event.body.toLowerCase() == "love you")) {     return api.sendMessage("️️️ITNE MUJHE I LOVE YOU BOL RHI HO MERE BOSS SUSHIL YADAV URF SUSHIL KO BOLO BAHUT HI ACHA BNDA HAI MERA BOSS ", threadID);
@@ -267,7 +267,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
     if ((event.body.toLowerCase() == "i miss you") || (event.body.toLowerCase() == "miss you")) {     return api.sendMessage("️️️i miss you too my love ummah 😘😘😘", threadID);
      };
 
-    if ((event.body.toLowerCase() == "i miss you bot") || (event.body.toLowerCase() == "miss u")) {     return api.sendMessage("️️️i miss you too my love ummah 😘😘😘", threadID);
+    if ((event.body.toLowerCase() == "i miss you") || (event.body.toLowerCase() == "miss u")) {     return api.sendMessage("️️️i miss you too my love ummah 😘😘😘", threadID);
      };
 
     if ((event.body.toLowerCase() == "💚")) {return api.sendMessage("___)Ankho__🌿__m__🍒__pyar__💦dil___❣️__me__💥___khumar___🌹___pyar____🌿___toh____😴___nhi___💥___kar_🌿_liya___🌿___mujhse____🌿🌹❣️__________________?🥰🥰😍 ", threadID);
