@@ -2,8 +2,8 @@ module.exports.config = {
         name: "profile",
         version: "1.0.0",
         hasPermssion: 0,
-        credits: "SHAAN KJAN",
-        description: "THIS BOT IS MADE BY SHAAN KHAN",
+        credits: "SUSHIL",
+        description: "THIS BOT IS MADE BY SUSHIL YADAV",
         commandCategory: "PROFILE DP",
         cooldowns: 0
 };
