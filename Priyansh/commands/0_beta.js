@@ -43,7 +43,7 @@ const emojiResponses = {
       "Papa aapke sar Mein taklif honi chahie kya main aapka sar Nahin dabata hun😹❤️",
       "Papa Apne dahin li hai 🤔",
       "Papa Meri Ami se kaho kya tum mujhse naraz to Nahin ho🤭",
-      "Shaan papa sirf Mera Hai 😒",
+      "Sushil papa sirf Mera Hai 😒",
       "Papa chocolate khilayega 🤩❤️🤭",
       "Papa mummy kahan hai🫣",
       "Papa Mujhe logon ke dilon se khelna hai 🤣"
