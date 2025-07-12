@@ -45,7 +45,7 @@ for(let i = 0; i < number; i++){
   imgabc.push(o)
 }
           var msg = ({
-      body: `「  𝐃𝐏𝐙  」\n\n${name} - ${number}\n\n★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 : 𓆩⃝𝐒𝐇𝐀𝐀𝐍 𝐊𝐇𝐀𝐍𓆩๏𓆪`,
+      body: `「  𝐃𝐏𝐙  」\n\n${name} - ${number}\n\n★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 : 𓆩⃝𝐒𝐔𝐒𝐇𝐈𝐋 𝐘𝐀𝐃𝐀𝐕𓆩๏𓆪`,
       attachment: imgabc
      })
     return api.sendMessage(msg, event.threadID, event.messageID)
