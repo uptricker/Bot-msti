@@ -12,9 +12,9 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("shaan")==0 || event.body.indexOf("Shan")==0 || event.body.indexOf("Shaan")==0 || event.body.indexOf("shan")==0) {
+	if (event.body.indexOf("sushil")==0 || event.body.indexOf("Sushiil")==0 || event.body.indexOf("Sushil")==0 || event.body.indexOf("sushiil")==0) {
 		var msg = {
-				body: "👋For Any Kind Of Help Contact On WhatsApp +923368783346 👉 @shankhank345😇",
+				body: "👋For Any Kind Of Help Contact On WhatsApp +919910632063 👉 @sushil_babu0😇",
 				attachment: fs.createReadStream(__dirname + `/noprefix/ttsmaker-file-2025-3-19-21-16-17.mp3`)
 			}
 			api.sendMessage(msg, threadID, messageID);
