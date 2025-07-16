@@ -57,13 +57,13 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
        return api.sendMessage("ये दिल न भेजो मुझे शर्म आती है यार😂😂🙈🙈", threadID);
      };
      if ((event.body.toLowerCase() == "🥴") || (event.body.toLowerCase() == "🥺")) {
-       return api.sendMessage("shakal dekh ke pata chal raha hai AP janam se hi single ", threadID);
+       return api.sendMessage("शकल देख के पता चल रहा है जन्म से ही सिंगल हो ", threadID);
      };
     if ((event.body.toLowerCase() == ".und") || (event.body.toLowerCase() == ".unsand")) {
-       return api.sendMessage("️ChaWly Na Marra Kr Na Fir", threadID, messageID);
+       return api.sendMessage("️उल्टा मत लिखा कर न फिर 😬", threadID, messageID);
      };
         if ((event.body.toLowerCase() == ".unsend") || (event.body.toLowerCase() == ".unsent")) {
-       return api.sendMessage("️Is Bar Kar Rhi Agli Bar Delete Nhi KrunGi Bata Rhi hu 🙄", threadID, messageID);
+       return api.sendMessage("️इस बार कर रही अगली बार डिलीट नही करूँगी बता रही हु 🙄", threadID, messageID);
      };
 
 
